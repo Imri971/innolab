@@ -1,0 +1,73 @@
+Pour le projet en symfony, il faut installer web pack pour le css et les img entre autre.
+
+1. Comme node est déja installé sur mon pc, j'installe yarn dans le dossier symfony avec cette commande dans le terminal: 
+curl -sS https://dl.yarnpkg.com/debian/pubkey.gpg | sudo apt-key add -
+
+echo "deb https://dl.yarnpkg.com/debian/ stable main" | sudo tee /etc/apt/sources.list.d/yarn.list
+
+Ensuite : sudo apt-get update && sudo apt-get install yarn
+ 
+
+Installer Encore:
+https://symfony.com/doc/current/frontend/encore/installation.html
+
+
+composer require symfony/webpack-encore-bundle
+ yarn install
+
+On tape cela pour que les changements soit automatiques:
+yarn encore dev --watch
+
+Dans le fichier assets/js/app.js, il faut ecrire à la place de la ligne debutant par require: 
+import '../css/app.css';
+import '../scss/app.scss';
+
+Si le server n'as pas encore été initié, il faut taper: 
+composer require server --dev
+
+ensuite php bin/console server:run 
+pour avoir le serveur
+
+Aller ensuite dans le fichier webpack.config.js et retirer les // de //.enableSassLoader()
+
+AJouter le loader de sass :
+
+yarn add sass-loader node-sass --dev
+
+Dans base.html.twig, on écris à l'intérieur des balises twig stylesheet:
+
+{% block stylesheets %}
+        {{ encore_entry_link_tags ( 'app' ) }}
+        {% endblock %}
+
+et pour js:
+
+{% block javascripts %}
+        {{ encore_entry_script_tags ( 'app' ) }}
+        {% endblock %}
+
+************************************************************************************
+****************************************************************************
+Pour résoudre le problème d'image, installer plugin: 
+https://hugo-soltys.com/blog/how-to-handle-image-assets-with-symfony-4
+
+npm i -D copy-webpack-plugin
+
+Aller dans webpack.config.js et taper cette ligne en dessous de var Encore :
+
+var CopyWebpackPlugin = require('copy-webpack-plugin'); // this line tell to webpack to use the plugin 
+
+Puis ajouter à la fin:
+
+.addPlugin(new CopyWebpackPlugin([
+        { from: './assets/images', to: 'images' }
+    ]))
+
+Ensuite, dans le src de l'image taper ça:
+
+{{asset('build/images/innolabMini.png')}} 
+
+En changeant juste le nom de l'image
+
+
+

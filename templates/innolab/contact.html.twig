@@ -1,0 +1,38 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Contact{% endblock %}
+
+{% block header_class %}class="header"{% endblock %}
+
+{% block body %}
+
+<div class="page_contact container col-11 col-sm-12 m-auto d-flex flex-wrap">
+    <div class="col-md-6 col-sm-12 mb-4">
+        <form action="#" method="POST">
+            <fieldset>
+            <legend>Formulaire</legend>
+            <div class="form-group">
+                <label for="exampleInputName1">Nom</label>
+                <input type="text" class="form-control" name="name" id="exampleInputName1" placeholder="Votre nom">
+            </div>
+            <div class="form-group">
+                <label for="exampleInputEmail1">Adresse email</label>
+                <input class="form-control" id="exampleInputEmail1" name="email" aria-describedby="emailHelp" placeholder="Entrer l'email" type="email">
+                <small id="emailHelp" class="form-text text-muted">Nous gardons précieusement votre email</small>
+            </div>
+            
+        
+            <div class="form-group">
+                <label for="exampleTextarea">Message</label>
+                <textarea class="form-control" id="exampleTextarea" name="message" rows="3"></textarea>
+            </div>
+            
+        
+            <button type="submit" class="btn btn-send">Envoyer</button>
+            </fieldset>
+        </form></div>
+    <div class="col-md-6 col-sm-12">
+        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2548.938911709605!2d2.762827815323731!3d50.293068179453975!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47dd47dd168dda19%3A0x3425fb35fa00d0de!2s16+Place+de+la+Pr%C3%A9fecture%2C+62000+Arras!5e0!3m2!1sfr!2sfr!4v1566396828386!5m2!1sfr!2sfr" width="600" height="450" frameborder="0" style="border:0" allowfullscreen></iframe></div>
+</div>
+
+{% endblock %}

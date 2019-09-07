@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" >
+	
+	<!-- Custom Media-Queties -->
+    <link rel="stylesheet" href="css/media-queries.css" />
+    <link href="{{ asset('css/bootstrap.min.css') }}" type="text/css" rel="stylesheet">
+
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+    <link rel="stylesheet" href="./node_modules/sal.js/dist/sal.css">
+    <link rel="stylesheet" href="node_modules/animate.css/animate.min.css">
+    <link rel="icon" href="{{asset('build/images/faviconInnolab.ico')}}" />
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+
+<!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+
+<!--[if lt IE 9]>
+
+  <script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
+
+  <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+
+<![endif]-->
+        <title>{% block title %}{% endblock %}</title>
+        {% block stylesheets %}
+        {{ encore_entry_link_tags ( 'app' ) }}
+        {% endblock %}
+    </head>
+    <body>
+     <header {% block header_class %}{% endblock %} >
+    
+<nav class="navbar navbar-expand-lg navbar-light ">
+                
+  <button class="navbar-toggler m-auto" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+
+  <ul class="nav_contact">
+
+          <li><a href="mailto:innolab62@pasdecalais.fr"><i class="fas fa-envelope"></i> <span>innolab62@pasdecalais.fr</span> </a></li>
+  </ul>        
+  <div class="collapse navbar-collapse " id="navbarNavDropdown">
+    <ul class="navbar-nav m-auto">
+    <li class="nav-item">
+      <a class="nav-link" href="about.html" >À propos</a>
+    </li>
+    <li class="nav-item ">
+        <a class="nav-link" href="#" >
+          Projets
+        </a>
+        
+        </li>
+    <li><a class="navbar-brand logo_Nav" href="{{ path('innolab')}}"><img src="{{asset('build/images/innolabMini.png')}}" data-aos="zoom-in-down" data-aos-offset="100" data-aos-duration="1000" data-aos-delay="900" data-aos-easing="ease-in-out" alt="Logo" /></a></li>
+    <li class="nav-item">
+      <a class="nav-link" href="#" >Methodologie</a>
+    </li>
+    
+    <li class="nav-item">
+      <a class="nav-link" href="{{ path('contact')}}" >Contact</a>
+    </li>
+    </ul>
+  </div>
+
+  <ul class=" nav_social">
+      <li>
+          <a href="https://twitter.com/innolab62?lang=fr" class="twitter" target="_blank"><i class="fab fa-twitter"></i></a>	</li>
+          <li><a href="https://www.linkedin.com/in/laurent-jakubowski-01080627/" class="linkedin" target="_blank"><i class="fab fa-linkedin-in"></i></a>	</li>
+          <li><a href="https://github.com/betagouv/blog.beta.gouv.fr/blob/master/content/_incubators/innolab-62.md" class="github" target="_blank"> <i class="fab fa-github"></i></a>	</li>
+          
+  </ul>
+  </nav>
+
+
+                {% block banner %}{% endblock %}
+                </header>
+
+        {% block body %}
+        {% endblock %}
+
+<footer class="d-flex align-items-center">
+        <div class="container col-lg-10 mt-3">
+                <div class="row text-left ">
+                <div class="innolab_infos col-sm-6 col-md-6 col-lg-3">
+
+                  <div class="col-md-8 col-sm-8 innolab__infos--block">
+                    <h2>Innolab 62</h2>
+                    <ul class="foot-contact">
+                        <li class="text-nowrap"><i class="fas fa-map-marker-alt "></i> 16 place de la Préfecture, 62000 Arras</li>
+                        <li><i class="fas fa-mobile-alt"></i> 03 21 21 92 25</li>
+                        <li class="text-nowrap"><i class="fas fa-envelope"></i><a href="mailto:innolab62@pasdecalais.fr"> innolab62@pasdecalais.fr</a></li>
+                        <li><img src="{{asset('build/images/global.svg')}}" alt=""> <a href="https://www.pasdecalais.fr/" target="_blank">pasdecalais.fr</a></li>
+                        
+                    </ul>
+                  </div>
+                </div>
+                
+                <div class="col-sm-6 col-md-6 col-lg-3 ">
+                  <div class="text-left col-12 d-flex flex-column align-items-center">
+                        <h2 >Informations</h2>
+                        <ul class="list-links ">
+                            <li><i class="far fa-caret-square-right mr-1" ></i><a href="musculation.html">Projets incubés</a></li>
+                            <li><i class="far fa-caret-square-right mr-1"></i><a href="entraineurs.html">Recrutement</a></li>
+                            <li><i class="far fa-caret-square-right mr-1"></i><a href="imc.html">Contact</a></li>
+                            
+                        </ul>
+                    </div>
+                </div>
+                
+                <div class="col-sm-6 col-md-6 col-lg-3 text-center">
+                    <h2>Réseaux </h2>
+                    <p>Suivez nous sur tous nos réseaux </p>
+                    <ul class="social">
+                        <li>
+                            <a href="https://twitter.com/innolab62?lang=fr" class="twitter" target="_blank"><i class="fab fa-twitter"></i></a>	</li>
+                            <li><a href="https://www.linkedin.com/in/laurent-jakubowski-01080627/" class="linkedin" target="_blank"><i class="fab fa-linkedin-in"></i></a>	</li>
+                            <li><a href="https://github.com/betagouv/blog.beta.gouv.fr/blob/master/content/_incubators/innolab-62.md" class="github" target="_blank"> <i class="fab fa-github"></i></a>	</li>
+                            
+                    </ul>
+                </div>
+                <div class="col-sm-6 col-md-6 col-lg-3 mt-3">
+                  <ul>
+                      <li> <a href="#" class="betagouv"> <img src="{{asset('build/images/betagouvfr.svg')}}" alt=""></a></li>
+                    <li><a href="#" class="pasdecalais"> <img src="{{asset('build/images/pasdecalais.png')}}" class="mt-2" alt=""></a></li>
+                    
+                  </ul>
+                  
+                 
+                </div>
+                    
+               
+            </div>
+        </div>
+</footer>
+        
+            <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+            <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+            <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+        
+        <!--Animation library-->
+        <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+        <script>
+        AOS.init();
+      </script>
+      <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+      <script>
+        $("#menu").on('click', function(){
+      
+          $(".menu_list").toggleClass("open");
+        })
+      
+        $(window).on("scroll", function() {
+          if($(window).scrollTop() > 5){
+             
+              $('.navbar').addClass("navbar_scroll");
+              $('.navbar').css("background-color","#fff");
+              
+          }
+          else {
+          
+            $('.navbar').css("background-color","transparent");
+             
+          }
+      });
+      
+      </script>
+
+            
+        {% block javascripts %}
+        {{ encore_entry_script_tags ( 'app' ) }}
+        {% endblock %}
+    </body>
+</html>
