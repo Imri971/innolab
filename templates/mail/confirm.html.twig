@@ -1,16 +1,14 @@
 {% extends 'base.html.twig' %}
 {% form_theme form 'bootstrap_4_layout.html.twig' %}
-{% block title %}Contact{% endblock %}
+{% block title %}Confirm{% endblock %}
 
 {% block body %}
 
     <div class="container col-5">
     <h1>Contactez-nous</h1>
      {{form_start(form)}}
-     {{form_row(form.name)}}
-     {{form_row(form.email)}}
-     {{form_row(form.message)}}
-     {{form_row(form.Envoyer, {attr: {class:'btn-dark'}})}}
+     {{form_widget(form)}}
+     
      {{form_end(form)}}
     </div>
 
