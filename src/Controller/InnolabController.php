@@ -17,13 +17,4 @@ class InnolabController extends AbstractController
         ]);
     }
 
-    /**
-     * @Route("/contact", name="contact")
-     */
-    public function contact()
-    {
-        return $this->render('innolab/contact.html.twig', [
-            'controller_name' => 'InnolabController',
-        ]);
-    }
 }
