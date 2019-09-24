@@ -38,6 +38,11 @@ class User implements UserInterface
      */
     private $Name;
 
+    /**
+     * @ORM\ManyToOne(targetEntity="App\Entity\Programmes", inversedBy="users")
+     */
+    private $programmes;
+
    
 
     public function getId(): ?int
@@ -128,6 +133,23 @@ class User implements UserInterface
         $this->Name = $Name;
 
         return $this;
+    }
+
+    public function getProgrammes(): ?Programmes
+    {
+        return $this->programmes;
+    }
+
+    public function setProgrammes(?Programmes $programmes): self
+    {
+        $this->programmes = $programmes;
+
+        return $this;
+    }
+
+    public function __toString()
+    {
+        return $this->Name;
     }
 
    

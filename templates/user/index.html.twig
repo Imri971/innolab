@@ -5,7 +5,7 @@
 {% block body %}
 
 {% if app.user %}
-    {% if app.user.email == 'imribalourd@gmail.com' %}
+    {% if is_granted('ROLE_ADMIN') %}  
     <div class="container mt-4 mb-5">
     <h1>Utilisateurs d'Innolab</h1>
 
