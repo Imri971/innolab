@@ -6,6 +6,7 @@ use App\Form\MailType;
 use App\Form\ConfirmType;
 use Symfony\Component\HttpFoundation\Request;
 use Symfony\Component\Routing\Annotation\Route;
+use Symfony\Component\Security\Core\User\UserInterface;
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 
 class MailController extends AbstractController
@@ -13,7 +14,7 @@ class MailController extends AbstractController
     /**
      * @Route("/contact", name="contact")
      */
-    public function index(Request $request, \Swift_Mailer $mailer)
+    public function index(Request $request, UserInterface $user, \Swift_Mailer $mailer)
     {
         $form = $this->createForm(MailType::class);
         $form->handleRequest($request);
@@ -23,15 +24,16 @@ class MailController extends AbstractController
             $datas = $form->getData();
             dump($datas);
             $date = new \DateTime();
+            
             $message = (new \Swift_Message('Innolab'))
-            ->setFrom($datas['email'])
-            ->setTo($datas['email'])
+            ->setFrom('imribalourd@gmail.com')
+            ->setTo($user->getEmail())
             ->setBody(
                 $this->renderView(
                     // templates/mail/mail.html.twig
                     'mail/mail.html.twig',
-                    ['name' => $datas['name'],
-                     'email' => $datas['email'],
+                    ['name' => $user->getName(),
+                     'email' => $user->getEmail(),
                      'message' => $datas['message'],
                      'date' => $date
                     ]
@@ -40,6 +42,8 @@ class MailController extends AbstractController
             'text/html'
             );
             $mailer->send($message);
+
+            return $this->redirectToRoute('innolab');
         }
 
         return $this->render('mail/contact.html.twig', [
@@ -50,7 +54,7 @@ class MailController extends AbstractController
     /**
      * @Route("/confirm", name="confirm")
      */
-    public function confirm(Request $request, \Swift_Mailer $mailer)
+    public function confirm(Request $request, UserInterface $user,  \Swift_Mailer $mailer)
     {
         $form = $this->createForm(ConfirmType::class);
         $form->handleRequest($request);
@@ -64,11 +68,13 @@ class MailController extends AbstractController
             ->setFrom('imribalourd@gmail.com')
             ->setTo('jeremie_1998@hotmail.fr')
             ->setBody(
-            "Un nouvel inscrit au programme :"
+            "Un nouvel inscrit au programme : ".$user->getName()
             ,
             'text/html'
             );
             $mailer->send($confirm);
+
+            return $this->redirectToRoute('innolab');
         }
 
         return $this->render('mail/confirm.html.twig', [
