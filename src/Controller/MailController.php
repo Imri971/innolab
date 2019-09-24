@@ -18,12 +18,12 @@ class MailController extends AbstractController
     {
         $form = $this->createForm(MailType::class);
         $form->handleRequest($request);
-
+        $date = new \DateTime();
         if ($form->isSubmitted() && $form->isValid()) {
             
             $datas = $form->getData();
             dump($datas);
-            $date = new \DateTime();
+            
             
             $message = (new \Swift_Message('Innolab'))
             ->setFrom('imribalourd@gmail.com')
@@ -51,34 +51,5 @@ class MailController extends AbstractController
         ]);
     }
 
-    /**
-     * @Route("/confirm", name="confirm")
-     */
-    public function confirm(Request $request, UserInterface $user,  \Swift_Mailer $mailer)
-    {
-        $form = $this->createForm(ConfirmType::class);
-        $form->handleRequest($request);
-
-        if ($form->isSubmitted() && $form->isValid()) {
-            
-            $datas = $form->getData();
-            dump($datas);
-
-            $confirm = (new \Swift_Message('Innolab'))
-            ->setFrom('imribalourd@gmail.com')
-            ->setTo('jeremie_1998@hotmail.fr')
-            ->setBody(
-            "Un nouvel inscrit au programme : ".$user->getName()
-            ,
-            'text/html'
-            );
-            $mailer->send($confirm);
-
-            return $this->redirectToRoute('innolab');
-        }
-
-        return $this->render('mail/confirm.html.twig', [
-            'form' => $form->createView()
-        ]);
-    }
+    
 }

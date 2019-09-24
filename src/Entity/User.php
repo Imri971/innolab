@@ -4,9 +4,14 @@ namespace App\Entity;
 
 use Doctrine\ORM\Mapping as ORM;
 use Symfony\Component\Security\Core\User\UserInterface;
+use Symfony\Bridge\Doctrine\Validator\Constraints\UniqueEntity;
 
 /**
  * @ORM\Entity(repositoryClass="App\Repository\UserRepository")
+ *  @UniqueEntity(
+ *  fields = {"email"},
+ *  message = " L'email que vous avez utilisé existe déjà"
+ * )
  */
 class User implements UserInterface
 {
@@ -42,6 +47,11 @@ class User implements UserInterface
      * @ORM\ManyToOne(targetEntity="App\Entity\Programmes", inversedBy="users")
      */
     private $programmes;
+
+    /**
+     * @ORM\Column(type="string", length=255, nullable=true)
+     */
+    private $alias;
 
    
 
@@ -150,6 +160,18 @@ class User implements UserInterface
     public function __toString()
     {
         return $this->Name;
+    }
+
+    public function getAlias(): ?string
+    {
+        return $this->alias;
+    }
+
+    public function setAlias(?string $alias): self
+    {
+        $this->alias = $alias;
+
+        return $this;
     }
 
    

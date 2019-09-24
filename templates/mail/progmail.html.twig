@@ -1,0 +1,45 @@
+
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" >
+ 
+<style>
+        th{
+            margin: 1rem auto 1rem;
+            color: #000;
+        }
+    </style>
+</head>
+<body>
+    <div class="container col-lg-7 mt-5 mb-5">
+            
+            <h3>Innolab 62: Il y a une nouvelle souscription</h3>
+            <small>Vous avez reçu un mail le {{date | date('d/m/Y')}} à {{date | date('H:i')}} </small>
+            
+
+                        <p>Félicitations {{name}} pour votre souscription au programme : <strong>{{programmes}}</strong></p>
+                        <p>Nous vous invitons à confirmer cette souscription auprès de notre équipe grâce au lien suivant afin de nous permettre de vous recontacter pour le suivi de votre commande</p>
+          
+                        <i class="fas fa-envelope"></i> 
+                        <p>Récapitulatif: </p>
+                        <ul>
+                            <li>Programme: {{programmes}}</li>
+                            <li>Le {{date | date('d/m/Y')}} à {{date | date('H:i')}}</li>
+                        </ul>
+                        
+                  <a href="http://127.0.0.1:8000/confirm" class="btn btn-primary">Confirmer votre souscription.</a>
+
+                {% if is_granted('ROLE_ADMIN') %}
+                  <a href="http://127.0.0.1:8000/confirm" class="btn btn-primary">Valider.</a>
+                {% else %}
+                    <p></p>
+                {% endif %}
+                
+             </div>
+             
+</body>
+</html>

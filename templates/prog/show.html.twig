@@ -1,0 +1,30 @@
+{% extends 'base.html.twig' %}
+{% block title %}Programmes{% endblock %}
+{% form_theme form 'bootstrap_4_layout.html.twig' %}
+
+{% block body %}
+
+    
+ {% if app.user %}
+    <div class="container col-lg-6 mt-5 mb-5">
+    
+    <h1>Confirmer votre souscription {{app.user.name}} </h1>
+    <table class="table">
+        <tr>
+            <th>Vous avez choisis le programme :</th>
+            <td><strong>{{programmes.Name}}</strong></td>
+        </tr>
+    </table>
+    <p> En envoyant, vous allez recevoir un mail récapitulatif.</p>
+ 
+     {{form_start(form)}}
+     {{form_widget(form)}}
+     
+     {{form_end(form)}}
+    </div>
+ {% else %}
+     <h1>Connectez-vous pour choisir un programme.</h1>
+   <a href="{{path('app_login')}}" class="btn btn-dark mb-5">Login</a>
+    {% endif %}
+   
+{% endblock %}

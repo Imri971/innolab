@@ -20,6 +20,9 @@
      {{form_end(form)}}
     </div>
     {% else %}
-        
+    <div class="container col-5 mb-5">
+        <h1> Login to choose</h1>
+        <a href="{{path('app_login')}}" class="btn btn-primary">Login</a>
+    </div>
    {% endif %}
 {% endblock %}
