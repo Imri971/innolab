@@ -4,13 +4,16 @@
 
 {% block body %}
 
-    <div class="container col-5">
-    <h1>Contactez-nous</h1>
+    {% if app.user %}
+        <div class="container col-5">
+    <h1>Confirmer votre souscription {{app.user.name}} </h1>
      {{form_start(form)}}
      {{form_widget(form)}}
      
      {{form_end(form)}}
     </div>
+    {% endif %}
+    
 
    
 {% endblock %}

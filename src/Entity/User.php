@@ -36,7 +36,9 @@ class User implements UserInterface
     /**
      * @ORM\Column(type="string", length=255)
      */
-    private $username;
+    private $Name;
+
+   
 
     public function getId(): ?int
     {
@@ -116,10 +118,17 @@ class User implements UserInterface
         // $this->plainPassword = null;
     }
 
-    public function setUsername(string $username): self
+    public function getName(): ?string
     {
-        $this->username = $username;
+        return $this->Name;
+    }
+
+    public function setName(string $Name): self
+    {
+        $this->Name = $Name;
 
         return $this;
     }
+
+   
 }

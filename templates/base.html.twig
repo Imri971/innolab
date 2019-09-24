@@ -37,7 +37,10 @@
   <button class="navbar-toggler m-auto" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
     <span class="navbar-toggler-icon"></span>
   </button>
-
+  {% if app.user %}
+    <p class="badge badge-light">{{app.user.name}} </p>
+  {% endif %}
+  
   <ul class="nav_contact">
 
           {# <li><a href="mailto:innolab62@pasdecalais.fr"><i class="fas fa-envelope"></i> <span>innolab62@pasdecalais.fr</span> </a></li> #}
@@ -136,8 +139,7 @@
         <script>
         AOS.init();
       </script>
-      <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
-            
+      
         {% block javascripts %}
         {{ encore_entry_script_tags ( 'app' ) }}
         {% endblock %}
