@@ -4,7 +4,8 @@
 
 {% block body %}
 
-{% if app.user.email == 'imribalourd@gmail.com' %}
+{% if app.user %}
+    {% if app.user.email == 'imribalourd@gmail.com' %}
     <div class="container mt-4 mb-5">
     <h1>Utilisateurs d'Innolab</h1>
 
@@ -49,6 +50,14 @@
         <a href="{{ path('app_login')}}" class="btn btn-dark ">Se connecter</a>
     </div>
     
+     <div class="container mt-4 mb-5"></div>
+    
+{% endif %}
+{% else %}
+    <div class="container mt-5 mb-5">
+        <h1>Cette page est réservée aux administrateurs</h1>
+        <a href="{{ path('app_login')}}" class="btn btn-dark ">Se connecter</a>
+    </div>
 {% endif %}
 
     

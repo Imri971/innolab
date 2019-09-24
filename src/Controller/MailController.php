@@ -14,7 +14,7 @@ class MailController extends AbstractController
     /**
      * @Route("/contact", name="contact")
      */
-    public function index(Request $request, UserInterface $user, \Swift_Mailer $mailer)
+    public function index(Request $request, UserInterface $user = null, \Swift_Mailer $mailer)
     {
         $form = $this->createForm(MailType::class);
         $form->handleRequest($request);
