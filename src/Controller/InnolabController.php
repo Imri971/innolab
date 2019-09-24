@@ -16,5 +16,14 @@ class InnolabController extends AbstractController
             'controller_name' => 'InnolabController',
         ]);
     }
+    /**
+     * @Route("/program", name="program")
+     */
+    public function program()
+    {
+        return $this->render('innolab/program.html.twig', [
+            'controller_name' => 'InnolabController',
+        ]);
+    }
 
 }
