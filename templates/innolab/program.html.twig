@@ -1,31 +1,25 @@
 {% extends 'base.html.twig' %}
 
+ {% block banner %} 
+    <div class="container banner d-block">
+        <h1 class="banner__title " >Programmes</h1>
+    </div>
+    {% endblock %}
 {% block body %}
 <div class="flex-wrap d-flex mb-5 col-12">
+    
+    {% for programme in programmes %}
     <div class="card bg-light ml-auto mr-auto mb-3 col-lg-3 col-md-8 col-sm-10">
         <div class="card-header">Header</div>
         <div class="card-body">
-            <h4 class="card-title">Comprendre ce qu’il se fait ailleurs :</h4>
-            <p class="card-text">innolab62 vous présente les projets réalisés au cours des 3 dernières années afin de
-                créér l’éveil de votre start-up.</p>
+            <h4 class="card-title">{{ programme.Name }}</h4>
+            <p class="card-text">{{ programme.description }}</p>
         </div>
+        <a href="{{path('program_show', {'id': programme.id})}}" class="btn btn-light">Choisir ce programme</a>
     </div>
-    <div class="card bg-light ml-auto mr-auto mb-3 col-lg-3 col-md-8 col-sm-10">
-        <div class="card-header">Header</div>
-        <div class="card-body">
-            <h4 class="card-title">Régler ses problématiques:</h4>
-            <p class="card-text">Nous vous apportons des clés pour mieux appréhender les usages, les
-                tendances et les innovations qui façonnent les territoires et transforment nos activités.</p>
-        </div>
-    </div>
-    <div class="card bg-light ml-auto mr-auto mb-3 col-lg-3 col-md-8 col-sm-10">
-        <div class="card-header">Header</div>
-        <div class="card-body">
-            <h4 class="card-title">transmettre les changements</h4>
-            <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's
-                content.</p>
-        </div>
-    </div>
-</div>
-
+    
+    {% endfor %}
+   </div>
+    
+    
 {% endblock %}

@@ -6,6 +6,7 @@ use App\Entity\User;
 use Symfony\Component\Form\AbstractType;
 use Symfony\Component\Form\FormBuilderInterface;
 use Symfony\Component\OptionsResolver\OptionsResolver;
+use Symfony\Component\Form\Extension\Core\Type\TelType;
 use Symfony\Component\Form\Extension\Core\Type\EmailType;
 use Symfony\Component\Form\Extension\Core\Type\PasswordType;
 
@@ -17,7 +18,11 @@ class UserType extends AbstractType
             ->add('name')
             ->add('email', EmailType::class)
             //->add('roles')
+            ->add('programmes')
+            ->add('tel', TelType::class)
+            ->add('adress')
             ->add('password', PasswordType::class)
+            ->add('confirm', PasswordType::class)
             
         ;
     }

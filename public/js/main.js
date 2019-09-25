@@ -1,6 +1,6 @@
 
 $(window).on("scroll", function() {
-    if($(window).scrollTop() > 50){
+    if($(window).scrollTop() > 20){
         
        
         $('.navbar').css("background-color","#24445c");
