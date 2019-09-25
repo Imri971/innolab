@@ -1105,8 +1105,9 @@ a.go-top:hover {
 
 /**********************************/
 .navbar-brand img {
-  height: 100%;
-  width: 100px;
+  height: 30px;
+  width: 25px;
+  filter: brightness(141%);
 }
 
 .navbar-light .navbar-toggler-icon {
@@ -1129,7 +1130,7 @@ a.go-top:hover {
   margin: 0;
   transition: 0.6s ease-in !important;
   padding: 0 1rem !important;
-  height: 74px !important;
+  height: 49px !important;
   position: fixed;
   width: 100%;
   top: 0;
