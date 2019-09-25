@@ -54,7 +54,7 @@ class InnolabController extends AbstractController
             $manager = $this->getDoctrine()->getManager();
             $datas = $form->getData();
             
-            // $datas['name']= $programmes->getName();
+            $datas['name']= $programmes->getName();
             // dump($datas);
             $user->setAlias($datas['name']);
             $manager->persist($user);
