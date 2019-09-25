@@ -23,8 +23,10 @@
      {{form_end(form)}}
     </div>
  {% else %}
+    <div class="container col-lg-9 mt-5 mb-5">
      <h1>Connectez-vous pour choisir un programme.</h1>
    <a href="{{path('app_login')}}" class="btn btn-dark mb-5">Login</a>
+   </div>
     {% endif %}
    
 {% endblock %}

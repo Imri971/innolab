@@ -7,22 +7,18 @@
     </div>
     {% endblock %}
 {% block body %}
-    {% if app.user %}
+    
     <div class="container col-5">
     <h1>Contactez-nous 
-        {{app.user.name}}
+       
      </h1>
 
         
      {{form_start(form)}}
+     {{form_row(form.name)}}
+     {{form_row(form.email)}}
      {{form_row(form.message)}}
      {{form_row(form.Envoyer, {attr: {class:'btn-dark'}})}}
      {{form_end(form)}}
     </div>
-    {% else %}
-    <div class="container col-5 mb-5">
-        <h1> Login to choose</h1>
-        <a href="{{path('app_login')}}" class="btn btn-primary">Login</a>
-    </div>
-   {% endif %}
 {% endblock %}

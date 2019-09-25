@@ -43,7 +43,7 @@ class InnolabController extends AbstractController
     /**
      * @Route("/program/{id}", name="program_show", methods={"GET","POST"})
      */
-    public function show(Programmes $programmes, ObjectManager $manager, Request $request, UserInterface $user ,  \Swift_Mailer $mailer): Response
+    public function show(Programmes $programmes, ObjectManager $manager, Request $request ,  \Swift_Mailer $mailer,  UserInterface $user = null): Response
     {
         $form = $this->createForm(ChoixProgType::class);
         $form->handleRequest($request);
@@ -52,13 +52,10 @@ class InnolabController extends AbstractController
         if ($form->isSubmitted() && $form->isValid()) {
             
             $manager = $this->getDoctrine()->getManager();
-
-            
-            
             $datas = $form->getData();
             
-            $datas['name']= $programmes->getName();
-            dump($datas);
+            // $datas['name']= $programmes->getName();
+            // dump($datas);
             $user->setAlias($datas['name']);
             $manager->persist($user);
             $manager->flush();
@@ -71,6 +68,7 @@ class InnolabController extends AbstractController
                     'mail/progmail.html.twig',
                     ['name' => $user->getName(),
                      'email' => $user->getEmail(),
+                     'tel' => $user->getTel(),
                      'programmes' => $programmes,
                      'date' => $date
                     ]

@@ -4,6 +4,7 @@ namespace App\Entity;
 
 use Doctrine\ORM\Mapping as ORM;
 use Symfony\Component\Security\Core\User\UserInterface;
+use Symfony\Component\Validator\Constraints as Assert;
 use Symfony\Bridge\Doctrine\Validator\Constraints\UniqueEntity;
 
 /**
@@ -35,9 +36,16 @@ class User implements UserInterface
     /**
      * @var string The hashed password
      * @ORM\Column(type="string")
+     *  @Assert\Length(min= 5, minMessage= "Votre mot de passe doit comporter 5 caractères minimum")
      */
     private $password;
 
+    /**
+     * @Assert\EqualTo(propertyPath="password", message="Votre confirmation n'est pas identique avec votre mot de passe")
+     */
+    public $confirm;
+
+    
     /**
      * @ORM\Column(type="string", length=255)
      */
@@ -52,6 +60,16 @@ class User implements UserInterface
      * @ORM\Column(type="string", length=255, nullable=true)
      */
     private $alias;
+
+    /**
+     * @ORM\Column(type="integer", nullable=true)
+     */
+    private $Tel;
+
+    /**
+     * @ORM\Column(type="string", length=255, nullable=true)
+     */
+    private $adress;
 
    
 
@@ -170,6 +188,30 @@ class User implements UserInterface
     public function setAlias(?string $alias): self
     {
         $this->alias = $alias;
+
+        return $this;
+    }
+
+    public function getTel(): ?int
+    {
+        return $this->Tel;
+    }
+
+    public function setTel(?int $Tel): self
+    {
+        $this->Tel = $Tel;
+
+        return $this;
+    }
+
+    public function getAdress(): ?string
+    {
+        return $this->adress;
+    }
+
+    public function setAdress(?string $adress): self
+    {
+        $this->adress = $adress;
 
         return $this;
     }

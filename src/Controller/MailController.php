@@ -26,8 +26,8 @@ class MailController extends AbstractController
             
             
             $message = (new \Swift_Message('Innolab'))
-            ->setFrom('imribalourd@gmail.com')
-            ->setTo($user->getEmail())
+            ->setFrom($user->getEmail())
+            ->setTo('innolab62sample@gmail.com')
             ->setBody(
                 $this->renderView(
                     // templates/mail/mail.html.twig
