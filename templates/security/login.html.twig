@@ -5,6 +5,8 @@
 {% block body %}
 
 <div class="container col-lg-4 mt-5 mb-5">
+{% if not app.user %}
+
 <form method="post">
     {% if error %}
         <div class="alert alert-danger">{{ error.messageKey|trans(error.messageData, 'security') }}</div>
@@ -35,9 +37,19 @@
         </div>
    
 
-    <button class="btn btn-lg btn-primary mt-4" type="submit">
+    <button class="btn btn-lg btn-prus mt-4" type="submit">
         Connexion
     </button>
 </form>
+
+{% else %}
+    <h1>Vous êtes déjà connecté {{app.user.name}} </h1>
+    <a href="{{path('app_logout')}}" class="btn btn-prus">Se déconnecter</a>
+{% endif %}
 </div>
 {% endblock %}
+
+
+    {% block footerPosition %}{% if app.user %}footerAbsolute{% endif %}{% endblock %}
+
+ 

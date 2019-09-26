@@ -8,6 +8,7 @@ use App\Repository\UserRepository;
 use Symfony\Component\HttpFoundation\Request;
 use Symfony\Component\HttpFoundation\Response;
 use Symfony\Component\Routing\Annotation\Route;
+use Symfony\Component\Security\Core\User\UserInterface;
 use Sensio\Bundle\FrameworkExtraBundle\Configuration\IsGranted;
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 use Symfony\Component\Security\Core\Encoder\UserPasswordEncoderInterface;
@@ -22,12 +23,12 @@ class UserController extends AbstractController
     /**
      * @Route("/", name="user_index", methods={"GET"})
      */
-    public function index(UserRepository $userRepository): Response
+    public function index(UserRepository $userRepository, UserInterface $user): Response
     {
-        $date = new \DateTime();
+       
         return $this->render('user/index.html.twig', [
             'users' => $userRepository->findAll(),
-            'date' => $date
+            
         ]);
     }
 
@@ -46,7 +47,8 @@ class UserController extends AbstractController
 
             $entityManager = $this->getDoctrine()->getManager();
 
-            $user->setPassword($hash);
+            $user->setPassword($hash)
+                 ->setCreatedAt(new \DateTime());
             $entityManager->persist($user);
             $entityManager->flush();
 
@@ -81,7 +83,8 @@ class UserController extends AbstractController
         if ($form->isSubmitted() && $form->isValid()) {
 
             $hash = $encoder->encodePassword($user, $user->getPassword());
-            $user->setPassword($hash);
+            $user->setPassword($hash)
+                 ->setConfirm($hash);
             $this->getDoctrine()->getManager()->flush();
 
             return $this->redirectToRoute('user_index');

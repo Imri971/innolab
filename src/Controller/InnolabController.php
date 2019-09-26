@@ -21,8 +21,11 @@ class InnolabController extends AbstractController
      */
     public function index()
     {
+        $pro = $this->getDoctrine()->getRepository(Programmes::class);
+        
+        $programmes = $pro->findAll();
         return $this->render('innolab/index.html.twig', [
-            'controller_name' => 'InnolabController',
+            'programmes' => $programmes
         ]);
     }
     /**
@@ -59,6 +62,7 @@ class InnolabController extends AbstractController
             $user->setAlias($datas['name']);
             $manager->persist($user);
             $manager->flush();
+           
             $confirm = (new \Swift_Message('Innolab'))
             ->setFrom('innolab62sample@gmail.com')
             ->setTo($user->getEmail())

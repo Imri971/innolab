@@ -1,0 +1,319 @@
+/* ==========================================================================
+   Media Queries
+   ========================================================================== */
+/* ---------------------------------------------------------------------- */
+/*	Version 1200px
+/* ---------------------------------------------------------------------- */
+@media only screen and (max-width: 1200px) {
+  .testimonials .testimonials-item {
+    font-size: 0.95em;
+  }
+
+  .testimonials .testimonials-item p {
+    line-height: 1.5em;
+  }
+
+  .news-item {
+    max-width: 220px;
+  }
+
+  .pricing .panel-heading:after {
+    border-width: 30px 105px 0 105px;
+  }
+
+  .footmenu li a {
+    padding: 0 10px;
+  }
+
+  .trainers-item {
+    width: 300px;
+  }
+
+  .classes-grid-item {
+    max-width: 220px;
+  }
+
+  .item-thumbnail.triangle .icons a {
+    font-size: 1em;
+  }
+
+  .flickr-feed li a {
+    width: 60px;
+  }
+
+  .tags li .btn-bordered {
+    font-size: 0.75em;
+  }
+
+  .bannercontainer .tp-bullets {
+    left: 20px !important;
+    margin: 0 !important;
+  }
+
+}
+
+/* ---------------------------------------------------------------------- */
+/*	Version 992px
+/* ---------------------------------------------------------------------- */
+@media handheld,
+only screen and (max-width: 992px) {
+  header {
+    position: relative;
+    z-index: 2;
+    width: 100%;
+    background-attachment: scroll !important;
+    -webkit-background-attachment: scroll !important;
+    background-position: center;
+    background-size: cover;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-repeat: no-repeat;
+  }
+
+  .header_index {
+    height: 33vh !important;
+    background-attachment: scroll !important;
+    -webkit-background-attachment: scroll !important;
+    background-position: center;
+    background-size: cover;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-repeat: no-repeat;
+  }
+
+  header .header-bottom h1 {
+    color: #fff;
+    font-size: 1.6em;
+  }
+
+  body {
+    padding-top: 5.5rem;
+  }
+
+  .navbar {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 999;
+  }
+
+  .item-thumbnail .logo_banner {
+    left: 41%;
+    width: 147px;
+    height: 94px;
+  }
+
+  .navbar {
+
+    background-color: #24445c !important;
+  }
+
+  .navbar .navbar-nav {
+    line-height: 0px;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+
+  }
+
+  .navbar-nav .dropdown-menu {
+    position: absolute !important;
+  }
+
+  .navbar .navbar-nav .dropdown .dropdown-menu li a {
+    padding: 5px 15px;
+    font-size: 1em;
+  }
+
+  .navbar-collapse {
+    position: absolute;
+    top: 100%;
+    left: 50%;
+    transform: translate(-50%);
+    background: #fff;
+    white-space: nowrap;
+    transition: all 0.5s ease-in-out;
+    height: 57px;
+  }
+
+  .dropdown-menu {
+    margin-top: -43px;
+  }
+
+  .classes-items {
+    flex-direction: column-reverse;
+  }
+
+  .about .row {
+    flex-direction: column-reverse;
+  }
+
+  .about .box img {
+
+    height: 128px !important;
+
+    }
+  aside {
+    position: relative !important;
+    height: 100%;
+  }
+
+  .twitter_fil {
+    margin-bottom: 8rem;
+  }
+
+  .box_projects {
+
+    margin: 0;
+  }
+
+  .innolab_infos {
+    display: flex;
+    justify-content: center;
+  }
+
+  footer h2 {
+    text-align: center;
+  }
+
+
+
+}
+
+/* ---------------------------------------------------------------------- */
+/*	Mobile Version 768px
+/* ---------------------------------------------------------------------- */
+@media handheld,
+only screen and (max-width: 767px) {
+
+  .navbar .navbar-nav {
+    float: none;
+  }
+
+  .navbar .navbar-nav li {
+    text-align: center;
+  }
+
+  .navbar .navbar-nav li a {
+    border: none;
+    margin: 5px;
+  }
+
+  .navbar .navbar-nav li a:hover {
+    border: none;
+  }
+
+  .navbar .navbar-nav .dropdown .dropdown-menu li {
+    padding: 0 0 0 30px;
+  }
+
+  .logo_Nav {
+    display: none;
+  }
+
+  .nav_contact li a span {
+    display: none;
+  }
+
+  .nav_contact li i {
+    font-size: 1.2em;
+  }
+
+  header .header-bottom h1 {
+    line-height: 50px;
+  }
+
+  .banner__title {
+    font-size: 3rem !important;
+  }
+  .banner__text {
+    font-size: 1.5rem !important;
+}
+
+  .breadcrumbs {
+    line-height: 50px;
+    text-align: left;
+  }
+
+  .pricing .panel-heading:after {
+    border-width: 30px 130px 0 130px;
+    left: 50%;
+    margin: 0 0 0 -130px;
+  }
+
+  .trainers-carousel,
+  .testimonials-carousel {
+    float: none;
+  }
+
+  .go-top {
+    display: none !important;
+  }
+
+  .innolab__infos--block {
+    width: 70%;
+  }
+
+  .carousel-control-prev {
+    left: -37px;
+  }
+
+  .carousel-control-next {
+    right: -26px !important;
+  }
+
+}
+
+/* ---------------------------------------------------------------------- */
+/*	Mobile Version 600px
+/* ---------------------------------------------------------------------- */
+
+@media handheld,
+only screen and (max-width: 600px) {
+  .bannercontainer {
+    display: none;
+  }
+
+  .item-thumbnail .logo_banner {
+    top: 36%;
+    left: 24%;
+  }
+
+  .navbar .navbar-nav {
+    line-height: 19px !important;
+    width: 100%;
+    line-height: 0px;
+    display: block;
+    margin: auto;
+    position: relative;
+    left: 0;
+  }
+
+  .dropdown-menu {
+    margin-top: 0;
+    left: -37%;
+    padding: 0 1rem;
+  }
+
+  .toTop {
+    right: 3px;
+  }
+
+  .toTop i {
+    font-size: 1.3rem;
+  }
+
+  .text_about {
+    margin-bottom: 2rem !important;
+  }
+
+}
+
+/* ---------------------------------------------------------------------- */
+/*	Mobile Version 320px
+/* ---------------------------------------------------------------------- *
+@media handheld, only screen and (max-width: 400px) 
+	.bannercontainer 
+		display non

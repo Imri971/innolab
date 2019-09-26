@@ -71,6 +71,11 @@ class User implements UserInterface
      */
     private $adress;
 
+    /**
+     * @ORM\Column(type="datetime", nullable=true)
+     */
+    private $created_At;
+
    
 
     public function getId(): ?int
@@ -212,6 +217,18 @@ class User implements UserInterface
     public function setAdress(?string $adress): self
     {
         $this->adress = $adress;
+
+        return $this;
+    }
+
+    public function getCreatedAt(): ?\DateTimeInterface
+    {
+        return $this->created_At;
+    }
+
+    public function setCreatedAt(?\DateTimeInterface $created_At): self
+    {
+        $this->created_At = $created_At;
 
         return $this;
     }

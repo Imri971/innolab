@@ -33,6 +33,11 @@ class Programmes
      */
     private $description;
 
+    /**
+     * @ORM\Column(type="string", length=255, nullable=true)
+     */
+    private $picture;
+
     
 
     public function __construct()
@@ -103,6 +108,18 @@ class Programmes
     public function __toString()
     {
         return $this->name;
+    }
+
+    public function getPicture(): ?string
+    {
+        return $this->picture;
+    }
+
+    public function setPicture(?string $picture): self
+    {
+        $this->picture = $picture;
+
+        return $this;
     }
    
 }

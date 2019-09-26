@@ -1,7 +1,12 @@
 {% extends 'base.html.twig' %}
 {% block title %}Programmes{% endblock %}
 {% form_theme form 'bootstrap_4_layout.html.twig' %}
-
+ 
+  {% block banner %} 
+    <div class="container banner d-block">
+            <h1 class="banner__title " >Votre programme</h1>
+    </div>
+    {% endblock %}
 {% block body %}
 
     
@@ -18,15 +23,18 @@
     <p> En envoyant, vous allez recevoir un mail récapitulatif.</p>
  
      {{form_start(form)}}
-     {{form_widget(form)}}
      
+     {{form_row(form.Envoyer, {attr: {class: "btn-prus"}})}}
+     <a href="{{path('program')}}" class="btn btn-prus">Retourner aux programmes</a>
      {{form_end(form)}}
     </div>
  {% else %}
     <div class="container col-lg-9 mt-5 mb-5">
      <h1>Connectez-vous pour choisir un programme.</h1>
-   <a href="{{path('app_login')}}" class="btn btn-dark mb-5">Login</a>
+   <a href="{{path('app_login')}}" class="btn btn-prus mb-5">Login</a>
    </div>
     {% endif %}
    
 {% endblock %}
+
+{% block footerPosition %}{% if not app.user %}footerAbsolute{% endif %}{% endblock %}

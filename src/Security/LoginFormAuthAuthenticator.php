@@ -85,7 +85,7 @@ class LoginFormAuthAuthenticator extends AbstractFormLoginAuthenticator
             return new RedirectResponse($targetPath);
         }
 
-        return new RedirectResponse($this->urlGenerator->generate('innolab'));
+        return new RedirectResponse($this->urlGenerator->generate('program'));
         throw new \Exception('TODO: provide a valid redirect inside '.__FILE__);
     }
 

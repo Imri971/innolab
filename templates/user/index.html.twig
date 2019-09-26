@@ -12,7 +12,6 @@
     <table class="table">
         <thead>
             <tr>
-                <th>Id</th>
                 <th>Utilisateurs</th>
                 <th>Email</th>
                 <th>Date d'inscription</th>
@@ -24,11 +23,10 @@
         <tbody>
         {% for user in users %}
             <tr>
-                <td>{{ user.id }}</td>
                 <td>{{ user.name }}</td>
                 <td>{{ user.email }}</td>
-                <td> Le {{ date | date('d/m/Y') }} à {{ date | date('H:i') }} </td>
-                <td>{{user.alias}} </td>
+                <td> Le {{ user.createdAt | date('d/m/Y') }} à {{ user.createdAt | date('H:i') }} </td>
+                <td>{{user.programmes}} </td>
                 <td>
                     <a href="{{ path('user_show', {'id': user.id}) }}">show</a>
                     <a href="{{ path('user_edit', {'id': user.id}) }}">edit</a>
@@ -42,14 +40,14 @@
         </tbody>
     </table>
 
-    <a href="{{ path('user_new') }}" class="btn btn-dark">Ajouter</a>
+    <a href="{{ path('user_new') }}" class="btn btn-prus">Ajouter</a>
 
 </div>
 
 {% else %}
     <div class="container mt-5 mb-5">
         <h1>Cette page est réservée aux administrateurs</h1>
-        <a href="{{ path('app_login')}}" class="btn btn-dark ">Se connecter</a>
+        <a href="{{ path('app_login')}}" class="btn btn-prus">Se connecter</a>
     </div>
     
      <div class="container mt-4 mb-5"></div>
@@ -58,7 +56,7 @@
 {% else %}
     <div class="container mt-5 mb-5">
         <h1>Cette page est réservée aux administrateurs</h1>
-        <a href="{{ path('app_login')}}" class="btn btn-dark ">Se connecter</a>
+        <a href="{{ path('app_login')}}" class="btn btn-prus ">Se connecter</a>
     </div>
 {% endif %}
 
