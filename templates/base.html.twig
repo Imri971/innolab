@@ -5,13 +5,12 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
    
-    <link rel="stylesheet" href="https://bootswatch.com/4/lux/bootstrap.min.css">
+  
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" >
-	
 	<!-- Custom Media-Queties -->
-    <link rel="stylesheet" href="css/media-queries.css" />
+    <link rel="stylesheet" href="{{ asset('css/media-queries.css') }}" />
     <link href="{{ asset('css/bootstrap.min.css') }}" type="text/css" rel="stylesheet">
-    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+    {# <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" /> #}
     <link rel="icon" href="{{asset('build/images/innolabLamp.png')}}" />
     <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
 
@@ -39,7 +38,7 @@
     <span class="navbar-toggler-icon"></span>
   </button>
   {% if app.user %}
-    <p class="badge badge-light">{{app.user.name}} </p>
+    <p class="badge badge-pill badge-light nav_user">Bienvenue {{app.user.name}} </p>
   {% endif %}
   
   <ul class="nav_contact">
@@ -71,7 +70,7 @@
         {% block body %}
         {% endblock %}
 
-<footer class="d-flex align-items-center">
+<footer class="d-flex align-items-center mt-4 {% block footerPosition %}{% endblock %}">
         <div class="container col-lg-10 mt-3">
                 <div class="row text-left ">
                 <div class="innolab_infos col-sm-6 col-md-6 col-lg-3">
@@ -130,16 +129,17 @@
             <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
             <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
         
-        <!--Animation library-->
+        {# <!--Animation library-->
         <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
         <script>
         AOS.init();
-      </script>
+      </script> #}
       
         {% block javascripts %}
         {{ encore_entry_script_tags ( 'app' ) }}
         {% endblock %}
 
         <script src="{{asset('js/main.js')}}"></script>
+        <script type="text/javascript">window.$crisp=[];window.CRISP_WEBSITE_ID="7417f5bf-ec8a-4e29-a548-63063db489b2";(function(){d=document;s=d.createElement("script");s.src="https://client.crisp.chat/l.js";s.async=1;d.getElementsByTagName("head")[0].appendChild(s);})();</script>
     </body>
 </html>

@@ -13,7 +13,6 @@
   "build/images/head.svg": "/build/images/head.svg",
   "build/images/idea.jpg": "/build/images/idea.58ddb7d7.jpg",
   "build/images/ideas.jpg": "/build/images/ideas.3c9bd17c.jpg",
-  "build/images/innolab.mp4": "/build/images/innolab.mp4",
   "build/images/innolab.png": "/build/images/innolab.png",
   "build/images/innolab621.png": "/build/images/innolab621.png",
   "build/images/innolabLamp.png": "/build/images/innolabLamp.png",
@@ -29,5 +28,7 @@
   "build/images/reading.svg": "/build/images/reading.svg",
   "build/images/students.svg": "/build/images/students.svg",
   "build/images/tablet.svg": "/build/images/tablet.svg",
-  "build/images/trognon.jpg": "/build/images/trognon.jpg"
+  "build/images/trognon.jpg": "/build/images/trognon.jpg",
+  "build/images/Logo_ambre2.png": "/build/images/Logo_ambre2.png",
+  "build/images/Logo_innolab.png": "/build/images/Logo_innolab.png"
 }

@@ -1,5 +1,19 @@
-@charset "utf-8";
-/***************************************************************************/
+.crisp-client .crisp-1rjpbb7 .crisp-1rf4xdh .crisp-kquevr .crisp-x94m06
+{
+   background-color: #F0C300 !important;
+}
+
+.crisp-client .crisp-1rjpbb7 .crisp-1rf4xdh .crisp-ewasyx .crisp-zyxrmn .crisp-1bu0ive .crisp-1uswakw .crisp-1qi8gka{
+  display: none !important;
+}
+
+.crisp-client .crisp-1rjpbb7[data-last-operator-face="false"] .crisp-1rf4xdh .crisp-kquevr .crisp-x94m06 .crisp-16qgsyi .crisp-101bp3x[data-is-ongoing="false"]
+{
+ 
+  background-image: url(https://scontent-cdt1-1.xx.fbcdn.net/v/t1.15752-9/71288715_388567668491216_8189578631387807744_n.png?_nc_cat=111&_nc_oc=AQnCEgwDqBLvA2LsnGsh-OlEPy2HvF-smeyWKE-NHKXL-XxOOwaUbDN27C_iHtB_W1o&_nc_ht=scontent-cdt1-1.xx&oh=d6c24acef1fd302b9ef150e2fbb7d182&oe=5E2F1DE0) !important ;
+}
+
+  /***************************************************************************/
 /********************************  $Content  *******************************/
 /**
 * + Content
@@ -99,8 +113,7 @@ article>h4:first-child {
 }
 
 aside {
-  position: sticky !important;
-  top: 5rem;
+  
   height: 100%;
 }
 
@@ -497,8 +510,14 @@ ul {
 .carousel-indicators {
   bottom: -40px !important;
 }
-
-
+/*******************************  $card  ********************************/
+.card{
+  padding: 0 !important;
+}
+.card-header
+{
+  margin-top: 0 !important;
+}
 /*******************************  $Buttons  ********************************/
 .btn {
   border: none;
@@ -514,6 +533,16 @@ ul {
   font-size: 1.4em;
 }
 
+.btn-prus {
+
+  color: #fff;
+  background-color: #24445c;
+
+}
+
+.btn-prus:hover{
+  background-color: #1a2f3f;
+}
 .btn.btn-bordered {
   border: 1px solid #c4c4c4;
   color: #0076d0;
@@ -643,18 +672,17 @@ ul {
 
 
 .twitter_fil {
-  height: 70vh !important;
+  height: 400px !important;
   overflow: hidden;
   overflow-y: visible;
   -webkit-overflow-y: visible;
   -webkit-overflow-scrolling: touch;
   border-radius: 3px;
 }
+.maps{
 
-.maps {
-  height: 400px !important;
+  height: 450px !important;
 }
-
 
 
 /**
@@ -1014,10 +1042,10 @@ a.go-top:hover {
  *
 /*******************************  $Projects  *******************************/
 .box_projects {
-  height: 304px;
+  height: auto;
   background-color: white;
-  padding: 2rem 1rem;
-  margin-bottom: 2rem;
+  padding: 2rem 1rem 3rem;
+  margin-bottom: 3rem;
   transition: all 0.2s ease-out;
 }
 
@@ -1076,6 +1104,17 @@ a.go-top:hover {
 
 /********************************  $Navbar  ********************************/
 
+.logo_Nav
+{
+  position: absolute;
+  left: 1rem;
+}
+.nav_user{
+  position: absolute;
+  left: 5rem;
+  top: 50%;
+  transform: translate(0, -50%);
+}
 .nav_contact {
   background: none;
   color: #F0C300;
@@ -1159,7 +1198,7 @@ a.go-top:hover {
   font-size: 0.98em;
   letter-spacing: 2px;
   margin: 16px 10px;
-  padding: 5px 0;
+  padding: 0;
   text-shadow: none;
   width: fit-content;
 }
@@ -1615,7 +1654,7 @@ a.go-top:hover {
 
 .about .box img {
   width: 100%;
-  height: 100%;
+  height: 150px;
 }
 
 .about b {
@@ -1671,6 +1710,13 @@ footer {
   min-height: 85px;
   color: #b0b0b0;
   background-color: #24445c;
+ 
+}
+
+.footerAbsolute{
+   position: absolute;
+   bottom: 0;
+   width: 100%;
 }
 
 footer a {
