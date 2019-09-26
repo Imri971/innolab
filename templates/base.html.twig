@@ -5,7 +5,8 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
    
-  
+   <script type="text/javascript">window.$crisp=[];window.CRISP_WEBSITE_ID="7417f5bf-ec8a-4e29-a548-63063db489b2";(function(){d=document;s=d.createElement("script");s.src="https://client.crisp.chat/l.js";s.async=1;d.getElementsByTagName("head")[0].appendChild(s);})();</script>
+    
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" >
 	<!-- Custom Media-Queties -->
     <link rel="stylesheet" href="{{ asset('css/media-queries.css') }}" />
@@ -38,18 +39,16 @@
     <span class="navbar-toggler-icon"></span>
   </button>
   {% if app.user %}
-    <p class="badge badge-pill badge-light nav_user">Bienvenue {{app.user.name}} </p>
+    <p class="badge badge-pill bg-prus nav_user yellow">Bienvenue {{app.user.name}} </p>
   {% endif %}
   
-  <ul class="nav_contact">
-
-          {# <li><a href="mailto:innolab62@pasdecalais.fr"><i class="fas fa-envelope"></i> <span>innolab62@pasdecalais.fr</span> </a></li> #}
-  </ul>        
+ 
   <div class="collapse navbar-collapse " id="navbarNavDropdown">
     <ul class="navbar-nav ml-auto">
     <li class="nav-item">
-      <a class="nav-link" href="#" >À propos</a>
+      <a class="nav-link" href="/" >Accueil</a>
     </li>
+    
    
     <li class="nav-item">
       <a class="nav-link" href="{{ path('program')}}" >Programmes</a>
@@ -60,6 +59,24 @@
     </li>
     </ul>
   </div>
+
+  {% if not app.user %}
+            <div class="col-lg-1 navUser">
+                <div class="  d-flex justify-content-center text-nowrap ml-auto">
+                    <a href="{{ path('app_login')}}" class="navUser__a" title="login" ><i class="fas fa-lock iconNav"></i> Se connecter</a>
+                </div>
+            </div>
+            {% else %}
+             <div class="col-lg-1 navUser">
+                <div class="d-flex  justify-content-center ">
+                    
+                    <div class="d-flex justify-content-center align-items-center text-nowrap">
+                    <a href="{{ path('app_logout')}}" class=" navUser__a" title="logout"><i class="fas fa-sign-in-alt iconNav"></i> Se déconnecter</a>
+                    </div>
+
+                </div>
+            </div>    
+            {% endif %}
 
   </nav>
 
@@ -91,9 +108,9 @@
                   <div class="text-left col-12 d-flex flex-column align-items-center">
                         <h2 >Informations</h2>
                         <ul class="list-links ">
-                            <li><i class="far fa-caret-square-right mr-1" ></i><a href="musculation.html">Projets incubés</a></li>
-                            <li><i class="far fa-caret-square-right mr-1"></i><a href="entraineurs.html">Recrutement</a></li>
-                            <li><i class="far fa-caret-square-right mr-1"></i><a href="imc.html">Contact</a></li>
+                            <li><i class="far fa-caret-square-right mr-1" ></i><a href="/#projets">Projets incubés</a></li>
+                            <li><i class="far fa-caret-square-right mr-1"></i><a href="{{path('program')}}">Programmes</a></li>
+                            <li><i class="far fa-caret-square-right mr-1"></i><a href="{{path('contact')}}">Contact</a></li>
                             
                         </ul>
                     </div>
@@ -140,6 +157,5 @@
         {% endblock %}
 
         <script src="{{asset('js/main.js')}}"></script>
-        <script type="text/javascript">window.$crisp=[];window.CRISP_WEBSITE_ID="7417f5bf-ec8a-4e29-a548-63063db489b2";(function(){d=document;s=d.createElement("script");s.src="https://client.crisp.chat/l.js";s.async=1;d.getElementsByTagName("head")[0].appendChild(s);})();</script>
-    </body>
+       </body>
 </html>

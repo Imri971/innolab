@@ -12,7 +12,25 @@
  
   background-image: url(https://scontent-cdt1-1.xx.fbcdn.net/v/t1.15752-9/71288715_388567668491216_8189578631387807744_n.png?_nc_cat=111&_nc_oc=AQnCEgwDqBLvA2LsnGsh-OlEPy2HvF-smeyWKE-NHKXL-XxOOwaUbDN27C_iHtB_W1o&_nc_ht=scontent-cdt1-1.xx&oh=d6c24acef1fd302b9ef150e2fbb7d182&oe=5E2F1DE0) !important ;
 }
+.crisp-client .crisp-1rjpbb7 .crisp-1rf4xdh .crisp-ewasyx .crisp-1784wh6 .crisp-1xmtdlg{
 
+  background-image: linear-gradient(125deg, #EDB410 -10%, #E1D54F 100%) !important;
+}
+
+.crisp-client .crisp-1rjpbb7 .crisp-1rf4xdh .crisp-ewasyx .crisp-zyxrmn .crisp-1bu0ive .crisp-z7oo2o .crisp-lgu84d .crisp-1ohjrf0 .crisp-dqw9ko .crisp-bhspdv .crisp-z89v5n .crisp-162m9xf
+{
+  background-color: #F0C300 !important;
+}
+
+.yellow 
+{
+  color: #F0C300 !important;
+}
+
+.new_img
+{
+  width: 300px;
+}
   /***************************************************************************/
 /********************************  $Content  *******************************/
 /**
@@ -117,7 +135,7 @@ aside {
   height: 100%;
 }
 
-aside h2 {
+aside h2, section h2 {
   color: #F0C300;
 }
 
@@ -517,6 +535,7 @@ ul {
 .card-header
 {
   margin-top: 0 !important;
+  color: #F0C300;
 }
 /*******************************  $Buttons  ********************************/
 .btn {
@@ -1213,11 +1232,6 @@ a.go-top:hover {
 
 }
 
-.nav-item:hover {
-  border-bottom: 3px solid #F0C300;
-  width: -moz-fit-content;
-  transition: 0.5 ease-in;
-}
 
 .nav_social {
   background: none;
@@ -1391,8 +1405,9 @@ a.go-top:hover {
 }
 
 .testimony img {
-  height: 200px;
-  width: 100%;
+  height: 100px;
+  width: 100px;
+  border-radius: 100%;
 }
 
 .testimony h4 {
@@ -1651,7 +1666,16 @@ a.go-top:hover {
   height: 70px;
   margin-bottom: 1rem;
 }
-
+.contact__detail
+{
+  margin-bottom: 6rem;
+}
+.contact__detail .btn{
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translate(-50%);
+}
 .about .box img {
   width: 100%;
   height: 150px;

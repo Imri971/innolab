@@ -8,17 +8,42 @@
     {% endblock %}
 {% block body %}
     
-    <div class="container col-5">
-    <h1>Contactez-nous 
-       
-     </h1>
+    <div class="container ">
+    <h1 class="text-center">Nous contacter </h1>
+    <div class="row d-flex justify-content-center flex-wrap">
+    
+        <div class="col-lg-5">
+            {{form_start(form)}}
+            {{form_row(form.nom, { 'label': " ",'attr': {'placeholder': 'Votre nom'}})}}
+            {{form_row(form.email, {'label': " ",'attr': {'placeholder': 'Votre adresse email'}})}}
+            {{form_row(form.objet, {'label': " ",'attr': {'placeholder': 'L\'objet de votre message'}})}}
+            {{form_row(form.message, {'label': " ",'attr': {'placeholder': 'Votre message'}})}}
+            {{form_row(form.Envoyer, {attr: {class:'btn-prus'}})}}
+            {{form_end(form)}}
+        </div>
+        <div class="col-lg-7 innolab__infos--block h-100 d-flex justify-content-center align-items-center">
+
+            <div class="d-flex flex-column align-items-center">
+                <h1 class="text-center "><a href="mailto:innolab62@pasdecalais.fr"> innolab62@pasdecalais.fr</a></h1>
+                
+                <ul class=" d-flex list-unstyled text-center">
+                    <li class="mr-4"><i class="fas fa-mobile-alt"></i> 03 21 21 92 25</li>
+                    <li class="text-nowrap "><i class="fas fa-map-marker-alt "></i> 16 place de la Préfecture, 62000 Arras</li>
+                    
+                    
+                </ul>
+
+                <iframe class="w-100 "
+        src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d163503.58049973354!2d2.4882883!3d50.184633!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47dd47dd168dda19%3A0x3425fb35fa00d0de!2s16%20Place%20de%20la%20Pr%C3%A9fecture%2C%2062000%20Arras!5e0!3m2!1sfr!2sfr!4v1569462676708!5m2!1sfr!2sfr"
+        width="600" height="280" frameborder="0" style="border:0;" allowfullscreen=""></iframe>
+            </div>
+            
+           
+        </div>
+    </div>
+    </div>
+    
 
         
-     {{form_start(form)}}
-     {{form_row(form.nom)}}
-     {{form_row(form.email)}}
-     {{form_row(form.message)}}
-     {{form_row(form.Envoyer, {attr: {class:'btn-prus'}})}}
-     {{form_end(form)}}
-    </div>
+     
 {% endblock %}

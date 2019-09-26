@@ -2,6 +2,7 @@
   "build/app.css": "/build/app.css",
   "build/app.js": "/build/app.js",
   "build/runtime.js": "/build/runtime.js",
+  "build/images/Logo_innolab.png": "/build/images/Logo_innolab.png",
   "build/images/apple.jpg": "/build/images/apple.jpg",
   "build/images/betagouvfr.svg": "/build/images/betagouvfr.svg",
   "build/images/buildings.svg": "/build/images/buildings.svg",
@@ -17,6 +18,13 @@
   "build/images/innolab621.png": "/build/images/innolab621.png",
   "build/images/innolabLamp.png": "/build/images/innolabLamp.png",
   "build/images/innolabMini.png": "/build/images/innolabMini.png",
+  "build/images/items-01.png": "/build/images/items-01.png",
+  "build/images/items-02.png": "/build/images/items-02.png",
+  "build/images/items-03.png": "/build/images/items-03.png",
+  "build/images/items-04.png": "/build/images/items-04.png",
+  "build/images/items-05.png": "/build/images/items-05.png",
+  "build/images/items-06.png": "/build/images/items-06.png",
+  "build/images/items-07.png": "/build/images/items-07.png",
   "build/images/linkedin.svg": "/build/images/linkedin.svg",
   "build/images/magnifier.svg": "/build/images/magnifier.svg",
   "build/images/menu.svg": "/build/images/menu.2b552a33.svg",
@@ -28,7 +36,5 @@
   "build/images/reading.svg": "/build/images/reading.svg",
   "build/images/students.svg": "/build/images/students.svg",
   "build/images/tablet.svg": "/build/images/tablet.svg",
-  "build/images/trognon.jpg": "/build/images/trognon.jpg",
-  "build/images/Logo_ambre2.png": "/build/images/Logo_ambre2.png",
-  "build/images/Logo_innolab.png": "/build/images/Logo_innolab.png"
+  "build/images/trognon.jpg": "/build/images/trognon.jpg"
 }

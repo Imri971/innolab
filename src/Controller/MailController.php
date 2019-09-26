@@ -25,7 +25,7 @@ class MailController extends AbstractController
             dump($datas);
             
             
-            $message = (new \Swift_Message('Innolab'))
+            $message = (new \Swift_Message($datas['objet']))
             ->setFrom($user->getEmail())
             ->setTo('innolab62sample@gmail.com')
             ->setBody(
@@ -42,7 +42,10 @@ class MailController extends AbstractController
             'text/html'
             );
             $mailer->send($message);
-
+            $this->addFlash(
+                'contact',
+                'Votre avons bien pris en compte votre message '.$datas['name']
+            );
             return $this->redirectToRoute('innolab');
         }
 

@@ -16,98 +16,69 @@
 <div class="classes-items d-flex flex-column">
 
   <div class="container ">
-      <section class="about col-lg-12 ml-auto">
-        <div class="row justify-content-center">
-          <div class="box col-lg-5 p-5 d-flex align-items-center justify-content-center">
-            {# <video width="100%" height="100%" controls="controls">
+    {% for message in app.flashes('success') %}
+      <div class="alert alert-success">
+        {{message}}
+      </div>
+    {% endfor %}
+    <section class="about col-lg-12 ml-auto">
+      <div class="row justify-content-center">
+        <div class="box col-lg-5 col-md-8 m-auto p-5 d-flex align-items-center justify-content-center">
+          {# <video width="100%" height="100%" controls="controls">
                           <source src="{{asset('build/images/innolab.mp4')}}" type="video/mp4" />
                           Ici l'alternative à la vidéo : un lien de téléchargement, un message, etc.
                         </video> #}
-            <img src="{{asset('build/images/Logo_innolab.png')}}" class="icon" alt="">
+          <img src="{{asset('build/images/Logo_innolab.png')}}" class="icon" alt="">
 
 
-          </div>
-          <div class="box col-lg-6 d-flex flex-column justify-content-center">
-            <h2 class="about_title">L'incubateur départemental pour l'innovation</h2>
-
-
-            <p>Notre ambition est de faciliter l’émergence de nouvelles idées, de nouvelles façons de faire
-pour améliorer le service public rendu aux usagers</p>
-
-            
-          </div>
         </div>
-      </section>
+        <div class="box col-lg-6 d-flex flex-column justify-content-center">
+          <h2 class="about_title">L'incubateur départemental pour l'innovation</h2>
+
+
+          <p>Notre ambition est de faciliter l’émergence de nouvelles idées, de nouvelles façons de faire
+            pour améliorer le service public rendu aux usagers.</p>
+
+
+        </div>
+      </div>
+    </section>
 
 
     <article class="contact col-12 pt-3 mt-4 d-flex justify-content-between flex-wrap" id="contact">
       <div class="col-lg-12 col-sm-12 mb-2">
-        <h2 class="text-center title__contact mb-3 title_yellow">Nos programmes s'appuient sur 3 piliers</h2>
-        <div class="title__bar mt-3 "></div>
+        <h2 class="text-center title__contact mb-3 title_yellow">Nos programmes </h2>
+        
       </div>
       <div class="row contact_container text-center ">
 
 
         {% for programme in programmes %}
-          <div class=" block col-md-4 mb-4 pt-3 d-flex justify-content-center">
+        <div class=" block col-md-4 mb-4 pt-3 d-flex justify-content-center">
           <div class="contact__detail">
             <img src="{{asset('build/images/') ~ programme.picture }}" class="icon" alt="">
             <p class="text-uppercase font-weight-bold">{{programme.name}}</p>
             <p>
-             {{programme.description|raw|truncate(110)}}
+              {{programme.description|raw|truncate(110)}}
             </p>
-            <a href="{{path('program')}}" class="btn btn-prus mt-4 mb-5">Découvrir</a>
+            <a href="{{path('program')}}" class="btn btn-prus mt-4 mb-5">En savoir plus</a>
           </div>
         </div>
 
         {% endfor %}
-        
-      
+
+
 
 
     </article>
 
-    {# <article class="edition col-12   d-flex justify-content-between flex-wrap" >  
-                    <div class="col-lg-12 col-sm-12 mb-4">
-                       <h2 class="text-center mb-3 title_yellow"  >Des forums innovations</h2>
-                       <div class="title__bar mt-3 "></div>
-                    </div>  
-                      <div class="row text-center mb-5 d-flex flex-column align-items-center">
-                          <div class=" block col-md-8 mb-4 pt-3 d-flex justify-content-center">
-                          <div class="edition__detail"  >
-                            
-                            <p class="text-uppercase font-weight-bold title_blue">Edition 2017</p>
-                            <p>En novembre 2017, le premier hackathon a mobilisé 30 porteurs de projets afin d’améliorer des services publics sur la base d’irritants détectés lors de
-                                leurs missions. 5 projets ont été primés.</p>
-                          </div>
-                          </div>
-    
-                          <div class=" block col-md-8 mb-4 pt-3 d-flex justify-content-center">
-                          <div class="edition__detail"  >
-                            
-                            <p class="text-uppercase font-weight-bold title_blue">Edition 2018</p>
-                            <p>
-                              Lors de la semaine de l’innovation publique de
-                              novembre 2018, un programme de conférences,
-                              débats et tables rondes ont permis aux agents du
-                              Département de découvrir de nouveaux outils,
-                              de nouvelles pratiques dans la fonction publique,
-                              l’ESS ou les ONG. Le deuxième hackathon a primé 2
-                              projets porteurs d’innovation.
-                            </p>
-                          </div>
-                          </div>
-                      
-                      </div>
-                   
-                       
-                   </article> #}
     <div class="projects col-12 mt-3">
       <div class="container">
         <div class="row">
           <div class="col-lg-9 ml-auto mr-auto col-md-12">
-            <h2 class="title_yellow">NOS PROJETS INCUBÉS</h2>
-            <p class="text-center">Grâce à une méthodologie éprouvée par les services de l’Etat (BETA.Gouv), plusieurs projets ont été
+            <h2 class="title_yellow" id="projets">NOS PROJETS INCUBÉS</h2>
+            <p class="text-center">Grâce à une méthodologie éprouvée par les services de l’Etat (BETA.Gouv), plusieurs
+              projets ont été
               primés à l’issue des deux premiers forums innovations de 2017 et 2018. Des agents du Département
               se sont engagés pour entreprendre des projets inédits.</p>
           </div>
@@ -124,7 +95,7 @@ pour améliorer le service public rendu aux usagers</p>
             </div>
             <p>Réduire le nombre de rendez-vous annulés en PMI et en permanence sociale.</p>
 
-            <a class="btn btn-primary" href="#" target="_blank">Découvrir</a>
+            <a class="btn btn-primary" href="https://www.banquedesterritoires.fr/projet-lapins-pour-innover-le-pas-de-calais-experimente-lintrapreneuriat-62" target="_blank">Découvrir</a>
           </div>
           <div class="box_projects col-lg-3 col-md-6 col-sm-12">
             <img src="{{asset('build/images/buildings.svg')}}" class="icon" alt="">
@@ -181,32 +152,83 @@ pour améliorer le service public rendu aux usagers</p>
 
 
 
-    <section class="testimony col-lg-12 mt-4">
+    <section class="testimony col-lg-6 ml-auto mr-auto mt-1 mb-4">
+    <h2 class="text-center mb-5">Innolab 62 en 1 mot ?</h2>
       <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
 
         <div class="carousel-inner">
           <div class="carousel-item active">
-            <div class="col-lg-8 col-md-8 m-auto text-center">
+            <div class="col-lg-9 col-md-8 m-auto text-center">
               <i class="fas fa-quote-right"></i>
-              <h4>Lorem ipsum dolor sit.</h4>
-              <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Facilis, natus ipsum eligendi aliquam iste
-                alias?</p>
+
+
+              <h4 class="mb-3">Innovation</h4>
+              <img src="{{asset('build/images/items-01.png')}}" class="icon mb-3" alt="">
+              <h6>Sandrine Hugot</h6>
+              <p>Cheffe de service</p>
+            </div>
+          </div>
+         
+          <div class="carousel-item">
+            <div
+              class="col-lg-9 col-md-8 m-auto text-center d-flex flex-column justify-content-center align-items-center">
+
+
+              <i class="fas fa-quote-right"></i>
+              <h4 class="mb-3"> Enthousiasme</h4>
+              <img src="{{asset('build/images/items-03.png')}}" class="icon mb-3" alt="">
+              <h6>Cécile Bacquet</h6>
+              <p>Chargée de développement social</p>
             </div>
           </div>
           <div class="carousel-item">
-            <div class="col-lg-8 col-md-8 m-auto text-center">
+            <div
+              class="col-lg-9 col-md-8 m-auto text-center d-flex flex-column justify-content-center align-items-center">
+
+
               <i class="fas fa-quote-right"></i>
-              <h4>Lorem ipsum dolor sit.</h4>
-              <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Facilis, natus ipsum eligendi aliquam iste
-                alias?</p>
+              <h4 class="mb-3"> L'épanouissement</h4>
+              
+              <img src="{{asset('build/images/items-05.png')}}" class="icon mb-3" alt="">
+              <h6>Mélanie Capoen</h6>
+              <p>Technicienne agenda 21</p>
             </div>
           </div>
           <div class="carousel-item">
-            <div class="col-lg-8 col-md-8 m-auto text-center">
+            <div
+              class="col-lg-9 col-md-8 m-auto text-center d-flex flex-column justify-content-center align-items-center">
+
+
               <i class="fas fa-quote-right"></i>
-              <h4>Lorem ipsum dolor sit.</h4>
-              <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Facilis, natus ipsum eligendi aliquam iste
-                alias?</p>
+              <h4 class="mb-3">Intense</h4>
+              <img src="{{asset('build/images/items-06.png')}}" class="icon mb-3" alt="">
+              <h6>Nicolas Droissart</h6>
+              <p>Apprenti développeur</p>
+            </div>
+          </div>
+          <div class="carousel-item">
+            <div
+              class="col-lg-9 col-md-8 m-auto text-center d-flex flex-column justify-content-center align-items-center">
+
+
+              <i class="fas fa-quote-right"></i>
+              <h4 class="mb-3">Stimulant</h4>
+              <img src="{{asset('build/images/items-04.png')}}" class="icon mb-3" alt="">
+            <h6>Elodie Vaneecke</h6>
+            <p>Conseillère en économie sociale et familiale</p>
+            </div>
+          </div>
+          
+          <div class="carousel-item">
+            <div
+              class="col-lg-9 col-md-8 m-auto text-center d-flex flex-column justify-content-center align-items-center">
+
+
+              <i class="fas fa-quote-right"></i>
+              <h4 class="mb-3">Innovant</h4>
+              <img src="{{asset('build/images/items-07.png')}}" class="icon mb-3" alt="">
+              <h6>Aude Millamon</h6>
+              <p>Puéricultrice</p>
             </div>
           </div>
         </div>
@@ -224,6 +246,9 @@ pour améliorer le service public rendu aux usagers</p>
           <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
           <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
           <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
+          <li data-target="#carouselExampleIndicators" data-slide-to="3"></li>
+          <li data-target="#carouselExampleIndicators" data-slide-to="4"></li>
+          <li data-target="#carouselExampleIndicators" data-slide-to="5"></li>
         </ol>
       </div>
 
@@ -233,11 +258,11 @@ pour améliorer le service public rendu aux usagers</p>
 
 
   <aside class="col-10 ml-auto mr-auto d-flex flex-wrap pb-3">
-  <div class="fil_Actu col-lg-6">
-      <h2 class="text-center">Notre fil d'actualité</h2>
-  
+    <div class="fil_Actu col-lg-6">
+      <h2 class="text-center">Nous suivre</h2>
+
       <div class="text-center">
-        
+
         <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
       </div>
       <div class="twitter_fil ">
@@ -248,12 +273,14 @@ pour améliorer le service public rendu aux usagers</p>
 
       </div>
 
-  </div>
-  <div class="col-lg-6 maps d-flex flex-column justify-content-center">
-   <h2 class="text-center">Nous trouver</h2>
-    <iframe class="w-100 h-100" src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d163503.58049973354!2d2.4882883!3d50.184633!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47dd47dd168dda19%3A0x3425fb35fa00d0de!2s16%20Place%20de%20la%20Pr%C3%A9fecture%2C%2062000%20Arras!5e0!3m2!1sfr!2sfr!4v1569462676708!5m2!1sfr!2sfr" width="600" height="450" frameborder="0" style="border:0;" allowfullscreen=""></iframe>
-  </div>
-    
+    </div>
+    <div class="col-lg-6 maps d-flex flex-column justify-content-center">
+      <h2 class="text-center">Nous trouver</h2>
+      <iframe class="w-100 h-100"
+        src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d163503.58049973354!2d2.4882883!3d50.184633!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47dd47dd168dda19%3A0x3425fb35fa00d0de!2s16%20Place%20de%20la%20Pr%C3%A9fecture%2C%2062000%20Arras!5e0!3m2!1sfr!2sfr!4v1569462676708!5m2!1sfr!2sfr"
+        width="600" height="450" frameborder="0" style="border:0;" allowfullscreen=""></iframe>
+    </div>
+
 
   </aside>
 </div>
