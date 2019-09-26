@@ -128,7 +128,10 @@ class InnolabController extends AbstractController
             'text/html'
             );
             $mailer->send($confirm);
-
+            $this->addFlash(
+                'confirm',
+                'Votre souscription à été validée '.$user->getName().". Notre équipe vous contactera prochaînement."
+            );
             return $this->redirectToRoute('innolab');
         }
 

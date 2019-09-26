@@ -26,14 +26,14 @@ class MailController extends AbstractController
             
             
             $message = (new \Swift_Message($datas['objet']))
-            ->setFrom($user->getEmail())
+            ->setFrom($datas['email'])
             ->setTo('innolab62sample@gmail.com')
             ->setBody(
                 $this->renderView(
                     // templates/mail/mail.html.twig
                     'mail/mail.html.twig',
-                    ['name' => $user->getName(),
-                     'email' => $user->getEmail(),
+                    ['name' => $datas['nom'],
+                     'email' => $datas['email'],
                      'message' => $datas['message'],
                      'date' => $date
                     ]
@@ -44,7 +44,7 @@ class MailController extends AbstractController
             $mailer->send($message);
             $this->addFlash(
                 'contact',
-                'Votre avons bien pris en compte votre message '.$datas['name']
+                'Votre avons bien pris en compte votre message '.$datas['nom']."."
             );
             return $this->redirectToRoute('innolab');
         }

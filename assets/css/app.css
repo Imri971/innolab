@@ -1232,87 +1232,11 @@ a.go-top:hover {
 
 }
 
+.nav-item {
 
-.nav_social {
-  background: none;
-  color: #F0C300;
-  position: absolute;
-  right: 20px;
-  top: 50%;
-  transform: translate(0, -50%);
+  margin-right: 0 !important;
 }
 
-.nav_social li {
-  display: inline-block;
-}
-
-.nav_social li a {
-  display: block;
-  line-height: 44px;
-  text-align: center;
-  margin: 0 5px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  font-size: 1.2em;
-}
-
-/**
- *
- *
-/*******************************  $Services  *******************************/
-.services h2 {
-  margin-bottom: 2em;
-  text-align: center;
-}
-
-.services .services-item {
-  margin-bottom: 30px;
-  padding: 0 20px 20px 70px;
-  position: relative;
-}
-
-.services .services-item a {
-  color: #F0C300;
-}
-
-.services .services-item a:hover {
-  color: #0076d0;
-}
-
-.services .services-item h4 {
-  margin-top: 0;
-}
-
-.services .services-item p {
-  line-height: 1.5em;
-  margin-bottom: 0;
-}
-
-.services .services-item .icon {
-  border: 1px solid #F0C300;
-  -webkit-border-radius: 3px;
-  border-radius: 3px;
-  color: #F0C300;
-  font-size: 1.3em;
-  height: 50px;
-  left: 0;
-  line-height: 50px;
-  position: absolute;
-  text-align: center;
-  top: 0;
-  width: 50px;
-  -webkit-transition: all 0.4s;
-  -moz-transition: all 0.4s;
-  -o-transition: all 0.4s;
-  -ms-transition: all 0.4s;
-  transition: all 0.4s;
-}
-
-.services .services-item:hover .icon {
-  border-color: #0076d0;
-  color: #0076d0;
-}
 
 /**
  *

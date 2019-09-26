@@ -21,6 +21,17 @@
         {{message}}
       </div>
     {% endfor %}
+    {% for message in app.flashes('contact') %}
+      <div class="alert alert-success">
+        {{message}}
+      </div>
+    {% endfor %}
+    <div class="container ">
+    {% for message in app.flashes('confirm') %}
+      <div class="alert alert-success">
+        {{message}}
+      </div>
+    {% endfor %}
     <section class="about col-lg-12 ml-auto">
       <div class="row justify-content-center">
         <div class="box col-lg-5 col-md-8 m-auto p-5 d-flex align-items-center justify-content-center">
@@ -59,7 +70,7 @@
             <img src="{{asset('build/images/') ~ programme.picture }}" class="icon" alt="">
             <p class="text-uppercase font-weight-bold">{{programme.name}}</p>
             <p>
-              {{programme.description|raw|truncate(110)}}
+              {{programme.description|raw|truncate(110, true)}}
             </p>
             <a href="{{path('program')}}" class="btn btn-prus mt-4 mb-5">En savoir plus</a>
           </div>
@@ -76,7 +87,7 @@
       <div class="container">
         <div class="row">
           <div class="col-lg-9 ml-auto mr-auto col-md-12">
-            <h2 class="title_yellow" id="projets">NOS PROJETS INCUBÉS</h2>
+            <h2 class="title_yellow mb-4" id="projets">NOS PROJETS INCUBÉS</h2>
             <p class="text-center">Grâce à une méthodologie éprouvée par les services de l’Etat (BETA.Gouv), plusieurs
               projets ont été
               primés à l’issue des deux premiers forums innovations de 2017 et 2018. Des agents du Département
@@ -117,7 +128,7 @@
                 allowfullscreen></iframe>
             </div>
             <p>Une communauté d’agents réunie autour de l’économie du compost.</p>
-            <a class="btn btn-primary" href="#" target="_blank">Découvrir</a>
+            <a class="btn btn-primary" href="https://www.facebook.com/pages/category/Community/Trognon-62-585016421850937/" target="_blank">Découvrir</a>
           </div>
           <div class="box_projects   col-lg-3 col-md-6 col-sm-12">
             <img src="{{asset('build/images/students.svg')}}" class="icon" alt="">
@@ -153,7 +164,7 @@
 
 
     <section class="testimony col-lg-6 ml-auto mr-auto mt-1 mb-4">
-    <h2 class="text-center mb-5">Innolab 62 en 1 mot ?</h2>
+    <h2 class="text-center mb-5">Innolab 62 en un mot ?</h2>
       <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
 
         <div class="carousel-inner">
