@@ -649,6 +649,10 @@ ul {
   text-align: center;
 }
 
+.classes-items {
+  z-index: 0;
+  -webkit-transform: translate3d(0, 0, 0);
+}
 .classes-items .class-item {
   margin-bottom: 50px;
 }
@@ -1202,7 +1206,7 @@ a.go-top:hover {
   position: fixed;
   width: 100%;
   top: 0;
-  z-index: 1000 !important;
+  z-index: 2;
 }
 
 .navbar .navbar-nav {
@@ -1331,23 +1335,6 @@ a.go-top:hover {
 /**
  *
  *
-/*****************************  $Testimonials  *****************************/
-.testimony {
-  height: auto;
-  padding: 1rem 1rem 3rem;
-
-}
-
-.testimony img {
-  height: 100px;
-  width: 100px;
-  border-radius: 100%;
-}
-
-.testimony h4 {
-  margin-top: 2rem;
-}
-
 
 
 /*******************************  $Thumbnail  ******************************/

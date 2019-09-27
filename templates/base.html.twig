@@ -19,7 +19,6 @@
   </script>
 
   <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css">
-  <link rel="stylesheet" href="{{ asset('css/media-queries.css') }}" />
   <link href="{{ asset('css/bootstrap.min.css') }}" type="text/css" rel="stylesheet">
   <link rel="icon" href="{{asset('build/images/innolabLamp.png')}}" />
   <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
@@ -37,6 +36,8 @@
   {% block stylesheets %}
   {{ encore_entry_link_tags ( 'app' ) }}
   {% endblock %}
+  <link rel="stylesheet" href="{{ asset('css/media-queries.css') }}" />
+  
 </head>
 
 <body>
