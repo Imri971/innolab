@@ -53,7 +53,7 @@
       </button>
       {% if app.user %}
       <div class=" d-flex w-100">
-        <p class="badge badge-pill bg-prus nav_user yellow mr-3">Bienvenue {{app.user.name}} </p><small
+        <p class="badge badge-pill bg-prus nav_user yellow mr-3"><span>Bienvenue</span> {{app.user.name}}</p><small
             class="badge badge-pill bg-light nav_user--admin text-dark">{% if is_granted('ROLE_ADMIN') %} ADMIN
             {% endif %}</small>
 
