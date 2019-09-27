@@ -26,12 +26,12 @@
         {{message}}
       </div>
     {% endfor %}
-    <div class="container ">
     {% for message in app.flashes('confirm') %}
       <div class="alert alert-success">
         {{message}}
       </div>
     {% endfor %}
+
     <section class="about col-lg-12 ml-auto">
       <div class="row justify-content-center">
         <div class="box col-lg-5 col-md-8 m-auto p-5 d-flex align-items-center justify-content-center">
@@ -159,10 +159,6 @@
       </div>
     </div>
 
-
-
-
-
     <section class="testimony col-lg-6 ml-auto mr-auto mt-1 mb-4">
     <h2 class="text-center mb-5">Innolab 62 en un mot ?</h2>
       <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
@@ -244,8 +240,6 @@
           </div>
         </div>
         <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
-
-
           <i class="fas fa-arrow-circle-left carousel-control-prev-icon"></i>
           <span class="sr-only">Previous</span>
         </a>
