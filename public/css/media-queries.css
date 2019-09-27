@@ -235,7 +235,9 @@ only screen and (max-width: 767px) {
   .iconNav
   {
     font-size: 1.4rem;
+    color: #F0C300 !important;
   }
+
   .navUser__a span
   {
     display: none;
