@@ -143,6 +143,14 @@ only screen and (max-width: 992px) {
     display: none;
   }
 
+  .nav_user--admin {
+    left: 7.8rem;
+}
+.navbar .navbar-nav {
+  float: none;
+  min-height: auto !important;
+
+}
 
   .navbar-nav .dropdown-menu {
     position: absolute !important;
@@ -158,10 +166,11 @@ only screen and (max-width: 992px) {
     top: 100%;
     left: 50%;
     transform: translate(-50%);
-    background: #fff;
+    background: #24445c !important;
     white-space: nowrap;
     transition: all 0.5s ease-in-out;
-    height: 57px;
+    border-radius: 0 0px 8px 8px;
+    width: 100%;
   }
 
   .dropdown-menu {
@@ -222,7 +231,12 @@ only screen and (max-width: 767px) {
   .navbar .navbar-nav li {
     text-align: center;
   }
-
+  .navbar-nav
+  {
+    margin-right: auto !important;
+    width: auto !important;
+    
+  }
   .navbar .navbar-nav li a {
     border: none;
     margin: 5px;
@@ -251,6 +265,10 @@ only screen and (max-width: 767px) {
 
   .nav_contact li i {
     font-size: 1.2em;
+  }
+  .navbar-collapse {
+    display: flex;
+    justify-content: center;
   }
 
   header .header-bottom h1 {
