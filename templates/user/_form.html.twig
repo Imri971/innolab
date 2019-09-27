@@ -4,7 +4,13 @@
 
     <div class="container col-lg-5">
     {{ form_start(form) }}
-        {{ form_widget(form) }}
+        {{ form_row(form.name, {'label': " ",'attr': {'placeholder': "Votre nom"}}) }}
+        {{ form_row(form.email, {'label': " ",'attr': {'placeholder': "Votre email"}}) }}
+        {{ form_row(form.programmes, {'label': "Sélectionner un programme (facultatif) "}) }}
+        {{ form_row(form.tel, {'label': " ",'attr': {'placeholder': "Votre numéro de téléphone"}}) }}
+        {{ form_row(form.adress, {'label': " ",'attr': {'placeholder': "Votre adresse postale"}}) }}
+        {{ form_row(form.password, {'label': " ",'attr': {'placeholder': "Votre mot de passe"}}) }}
+        {{ form_row(form.confirm, {'label': " ",'attr': {'placeholder': "Confirmation du mot de passe"}}) }}
         <button class="btn btn-prus">{{ button_label|default('S\'inscrire') }}</button>
     {{ form_end(form) }}
 </div>

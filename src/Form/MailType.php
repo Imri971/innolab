@@ -17,6 +17,7 @@ class MailType extends AbstractType
         $builder
             ->add('nom', TextType::class)
             ->add('email', EmailType::class)
+            ->add('objet', TextType::class)
             ->add('message', TextareaType::class)
             ->add('Envoyer', SubmitType::class)
         ;

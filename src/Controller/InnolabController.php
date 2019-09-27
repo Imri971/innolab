@@ -21,6 +21,7 @@ class InnolabController extends AbstractController
      */
     public function index()
     {
+        
         $pro = $this->getDoctrine()->getRepository(Programmes::class);
         
         $programmes = $pro->findAll();
@@ -81,6 +82,11 @@ class InnolabController extends AbstractController
             );
             $mailer->send($confirm);
 
+            //$request->getSession()->getFlashBag()->add();
+            $this->addFlash(
+                'success',
+                'Votre demande de renseignements sur le programme '.$user->getAlias().' a bien été prise en compte '.$user->getName()."."
+            );
             return $this->redirectToRoute('innolab');
         }
 
@@ -112,15 +118,20 @@ class InnolabController extends AbstractController
                     'mail/ajout.html.twig',
                     ['name' => $user->getName(),
                      'email' => $user->getEmail(),
+                     'tel' => $user->getTel(),
                      'alias' => $user->getAlias(),
-                     'date' => $date
+                     'date' => $date,
+                     'creation' => $user->getCreatedAt()
                     ]
                 )
             ,
             'text/html'
             );
             $mailer->send($confirm);
-
+            $this->addFlash(
+                'confirm',
+                'Votre souscription à été validée '.$user->getName().". Notre équipe vous contactera prochaînement."
+            );
             return $this->redirectToRoute('innolab');
         }
 

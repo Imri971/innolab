@@ -1,16 +1,20 @@
 {% extends 'base.html.twig' %}
 
-{% block title %}New User{% endblock %}
-
+{% block title %}Inscription{% endblock %}
+{% block banner %}
+<div class="container banner d-block">
+  <h1 class="banner__title ">S'inscrire</h1>
+</div>
+{% endblock %}
 {% block body %}
  <div class="col-lg-9 ml-auto mr-auto mt-5">
     {% if not app.user %}
-      
+      <img src="{{asset('build/images/innolabMini.png')}}" class="d-block m-auto new_img" alt="">
     <h1 class="text-center mt-4 mb-5">Bienvenue sur Innolab</h1>
+    
 
     {{ include('user/_form.html.twig') }}
 
-    <a href="{{ path('user_index') }}">back to list</a>
     {% else %}
          <h1>Vous êtes connecté actuellement {{app.user.name}}</h1>
          <p> <a href="{{path('app_logout')}}">Déconnectez-vous</a> de votre session actuelle pour ouvrir une nouvelle session.</p>
