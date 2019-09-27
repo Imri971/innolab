@@ -96,7 +96,7 @@ only screen and (max-width: 992px) {
     position: fixed;
     top: 0;
     width: 100%;
-    z-index: 999;
+    z-index: 1 !important;
   }
 
   .item-thumbnail .logo_banner {
@@ -188,6 +188,13 @@ only screen and (max-width: 992px) {
 @media handheld,
 only screen and (max-width: 767px) {
 
+  .navUser{
+    position: absolute !important;
+    top: 50%;
+    right: 5px;
+    width: auto !important;
+    transform: translate(0,-50%);
+  }
   .navbar .navbar-nav {
     float: none;
   }
