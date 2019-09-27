@@ -299,7 +299,6 @@ header .header-bottom h1 {
   overflow: hidden !important;
   background: none;
   background-color: transparent !important;
-  z-index: 1;
   cursor: crosshair;
   transition: 1s ease-out;
 }
@@ -646,11 +645,10 @@ ul {
 }
 
 /******************************  $Classes Item  ******************************/
-.classes-items {
-  z-index: 0;
+/* .classes-items {
   transform: translate3d(0, 0, 0);
   -webkit-transform: translate3d(0, 0, 0);
-}
+} */
 
 .classes-items h2 {
   text-align: center;
@@ -1718,16 +1716,6 @@ footer .betagouv img {
   display: block;
 }
 
-#topBtn {
-  position: fixed;
-  right: 1rem;
-  bottom: 1rem;
-  font-size: 2em;
-  z-index: 1;
-  opacity: 0.8;
-  color: #33658a;
-
-}
 
 #topBtn:hover {
   cursor: pointer;
