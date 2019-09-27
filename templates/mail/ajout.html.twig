@@ -1,18 +1,19 @@
-
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="https://bootswatch.com/4/lux/bootstrap.min.css">
-    
+
 </head>
 
 <body>
     <div class="container col-lg-7 mt-5 mb-5">
-            
+
         <h3>Innolab 62: Il y a une nouvelle demande d'informations</h3>
         <small>Vous avez reçu un mail le {{date | date('d/m/Y')}} à {{date | date('H:i')}} </small>
-        <p>Un nouveau client authentifié avec l'adresse <strong>{{email}}</strong> s'est inscrit au programme <strong>{{alias}}</strong>. </p>
+        <p>Un nouveau client authentifié avec l'adresse <strong>{{email}}</strong> s'est inscrit au programme
+            <strong>{{alias}}</strong>. </p>
         <p>Informations:</p>
         <ul>
             <li><strong>Nom:</strong> {{name}}</li>
@@ -21,8 +22,10 @@
             <li><strong>Programme:</strong> {{alias}}</li>
             <li><strong>Inscription: </strong> Le {{date | date('d/m/Y')}} à {{date | date('H:i')}}</li>
         </ul>
-        <a href="http://127.0.0.1:8000/admin" class="btn btn-primary">Valider le programme de l'utilisateur: {{name}}</a>
+        <a href="http://127.0.0.1:8000/admin" class="btn btn-primary">Valider le programme de l'utilisateur:
+            {{name}}</a>
     </div>
-             
+
 </body>
+
 </html>

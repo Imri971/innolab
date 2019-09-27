@@ -4,39 +4,39 @@
 
 {% block body %}
 
-    <div class="col-lg-10 ml-auto mr-auto mt-4">
-        <h1>Liste des programmes</h1>
-        <table class="table text-dark">
+<div class="col-lg-10 ml-auto mr-auto mt-4">
+    <h1>Liste des programmes</h1>
+    <table class="table text-dark">
         <thead>
             <tr>
-              
+
                 <th>Nom</th>
                 <th>Description</th>
                 <th>Actions</th>
             </tr>
         </thead>
         <tbody>
-        {% for programme in programmes %}
+            {% for programme in programmes %}
             <tr>
-                
+
                 <td>{{ programme.name }}</td>
                 <td>{{ programme.description }}</td>
                 <td>
                     <a href="{{ path('programmes_show', {'id': programme.id}) }}" class="btn btn-prus mb-2">Afficher</a>
-                    <a href="{{ path('programmes_edit', {'id': programme.id}) }}"class="btn btn-prus">Modifier</a>
+                    <a href="{{ path('programmes_edit', {'id': programme.id}) }}" class="btn btn-prus">Modifier</a>
                 </td>
             </tr>
-        {% else %}
+            {% else %}
             <tr>
                 <td colspan="4">no records found</td>
             </tr>
-        {% endfor %}
+            {% endfor %}
         </tbody>
     </table>
 
-     <a href="{{ path('tags_new') }}" class="btn-btn-prus">Nouveau programme</a>
-    </div>
-    
+    <a href="{{ path('tags_new') }}" class="btn-btn-prus">Nouveau programme</a>
+</div>
 
-    
+
+
 {% endblock %}
