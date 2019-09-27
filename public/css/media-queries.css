@@ -125,8 +125,24 @@ only screen and (max-width: 992px) {
   }
   .nav-link
   {
+    font-size: 1.4rem;
     color: #F0C300 !important;
   }
+  .iconNav
+  {
+    font-size: 1.4rem;
+    color: #F0C300 !important;
+  }
+  .nav_user span
+  {
+    display: none !important;
+  }
+
+  .navUser__a span
+  {
+    display: none;
+  }
+
 
   .navbar-nav .dropdown-menu {
     position: absolute !important;
@@ -224,25 +240,11 @@ only screen and (max-width: 767px) {
     left: 3rem !important;
     
   }
-  .nav_user span
-  {
-    display: none !important;
-  }
   
   .nav_user--admin {
     left: 5.5rem;
   }
-  .iconNav
-  {
-    font-size: 1.4rem;
-    color: #F0C300 !important;
-  }
-
-  .navUser__a span
-  {
-    display: none;
-  }
-
+ 
   .nav_contact li a span {
     display: none;
   }
