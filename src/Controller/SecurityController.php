@@ -59,7 +59,10 @@ class SecurityController extends AbstractController
                  ->setCreatedAt(new \DateTime());
             $entityManager->persist($user);
             $entityManager->flush();
-            
+            $this->addFlash(
+                'new',
+                'Nous confirmons votre souscription '.$user->getName().". Vous pouvez vous connecter maintenant."
+            );
 
             return $this->redirectToRoute('app_login');
         }

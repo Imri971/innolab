@@ -10,7 +10,11 @@
 
 <div class="container col-lg-4 mt-5 mb-5">
 {% if not app.user %}
-
+{% for message in app.flashes('new') %}
+      <div class="alert alert-success">
+        {{message}}
+      </div>
+    {% endfor %}
 <form method="post">
     {% if error %}
         <div class="alert alert-danger">{{ error.messageKey|trans(error.messageData, 'security') }}</div>
