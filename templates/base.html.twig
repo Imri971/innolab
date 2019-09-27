@@ -82,8 +82,8 @@
       {% if not app.user %}
       <div class="col-lg-1 navUser">
         <div class="  d-flex justify-content-center text-nowrap ml-auto">
-          <a href="{{ path('app_login')}}" class="navUser__a mr-lg-3 mr-md-1" title="login"><i class="fas fa-lock iconNav"></i> Se
-            connecter</a>
+          <a href="{{ path('app_login')}}" class="navUser__a mr-lg-3 mr-md-1" title="login"><i class="fas fa-lock iconNav"></i><span>Se
+            connecter</span> </a>
         </div>
       </div>
       {% else %}
@@ -91,7 +91,7 @@
         <div class="d-flex  justify-content-center ">
           <div class="d-flex justify-content-center align-items-center text-nowrap">
             <a href="{{ path('app_logout')}}" class=" navUser__a mr-lg-3 mr-md-1" title="logout"><i
-                class="fas fa-sign-in-alt iconNav"></i> Se déconnecter</a>
+                class="fas fa-sign-in-alt iconNav"></i> <span>Se déconnecter</span> </a>
           </div>
         </div>
       </div>
