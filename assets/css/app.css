@@ -534,6 +534,12 @@ ul {
   bottom: -40px !important;
 }
 
+.carousel img {
+  width: 110px;
+  height: 110px;
+  border-radius: 100%;
+}
+
 /*******************************  $card  ********************************/
 .card {
   padding: 0 !important;
@@ -1334,8 +1340,12 @@ a.go-top:hover {
 
 /**
  *
- *
+ */
+.testimony {
+  height: auto;
+  padding: 1rem 1rem 3rem;
 
+}
 
 /*******************************  $Thumbnail  ******************************/
 .item-thumbnail {
