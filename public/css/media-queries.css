@@ -232,7 +232,14 @@ only screen and (max-width: 767px) {
   .nav_user--admin {
     left: 5.5rem;
   }
-  
+  .iconNav
+  {
+    font-size: 1.4rem;
+  }
+  .navUser__a span
+  {
+    display: none;
+  }
 
   .nav_contact li a span {
     display: none;
