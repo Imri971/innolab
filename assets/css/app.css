@@ -1,42 +1,42 @@
-.crisp-client .crisp-1rjpbb7 .crisp-1rf4xdh .crisp-kquevr .crisp-x94m06
-{
-   background-color: #F0C300 !important;
+.crisp-client .crisp-1rjpbb7 .crisp-1rf4xdh .crisp-kquevr .crisp-x94m06 {
+  background-color: #F0C300 !important;
 }
 
-.crisp-client .crisp-1rjpbb7 .crisp-1rf4xdh .crisp-ewasyx .crisp-zyxrmn .crisp-1bu0ive .crisp-1uswakw .crisp-1qi8gka{
+.crisp-client .crisp-1rjpbb7 .crisp-1rf4xdh .crisp-ewasyx .crisp-zyxrmn .crisp-1bu0ive .crisp-1uswakw .crisp-1qi8gka {
   display: none !important;
 }
 
-.crisp-client .crisp-1rjpbb7[data-last-operator-face="false"] .crisp-1rf4xdh .crisp-kquevr .crisp-x94m06 .crisp-16qgsyi .crisp-101bp3x[data-is-ongoing="false"]
-{
- 
-  background-image: url(https://scontent-cdt1-1.xx.fbcdn.net/v/t1.15752-9/71288715_388567668491216_8189578631387807744_n.png?_nc_cat=111&_nc_oc=AQnCEgwDqBLvA2LsnGsh-OlEPy2HvF-smeyWKE-NHKXL-XxOOwaUbDN27C_iHtB_W1o&_nc_ht=scontent-cdt1-1.xx&oh=d6c24acef1fd302b9ef150e2fbb7d182&oe=5E2F1DE0) !important ;
+.crisp-client .crisp-1rjpbb7[data-last-operator-face="false"] .crisp-1rf4xdh .crisp-kquevr .crisp-x94m06 .crisp-16qgsyi .crisp-101bp3x[data-is-ongoing="false"] {
+
+  background-image: url(https://scontent-cdt1-1.xx.fbcdn.net/v/t1.15752-9/71288715_388567668491216_8189578631387807744_n.png?_nc_cat=111&_nc_oc=AQnCEgwDqBLvA2LsnGsh-OlEPy2HvF-smeyWKE-NHKXL-XxOOwaUbDN27C_iHtB_W1o&_nc_ht=scontent-cdt1-1.xx&oh=d6c24acef1fd302b9ef150e2fbb7d182&oe=5E2F1DE0) !important;
 }
-.crisp-client .crisp-1rjpbb7 .crisp-1rf4xdh .crisp-ewasyx .crisp-1784wh6 .crisp-1xmtdlg{
+
+.crisp-client .crisp-1rjpbb7 .crisp-1rf4xdh .crisp-ewasyx .crisp-1784wh6 .crisp-1xmtdlg {
 
   background-image: linear-gradient(125deg, #EDB410 -10%, #E1D54F 100%) !important;
 }
 
-.crisp-client .crisp-1rjpbb7 .crisp-1rf4xdh .crisp-ewasyx .crisp-zyxrmn .crisp-1bu0ive .crisp-z7oo2o .crisp-lgu84d .crisp-1ohjrf0 .crisp-dqw9ko .crisp-bhspdv .crisp-z89v5n .crisp-162m9xf
-{
+.crisp-client .crisp-1rjpbb7 .crisp-1rf4xdh .crisp-ewasyx .crisp-zyxrmn .crisp-1bu0ive .crisp-z7oo2o .crisp-lgu84d .crisp-1ohjrf0 .crisp-dqw9ko .crisp-bhspdv .crisp-z89v5n .crisp-162m9xf {
   background-color: #F0C300 !important;
 }
 
-.yellow 
-{
+.yellow {
   color: #F0C300 !important;
 }
 
-.new_img
-{
+.new_img {
   width: 300px;
 }
 
-.table th, .table td
-{
+.table th,
+.table td {
   vertical-align: middle;
 }
-  /***************************************************************************/
+
+.btn{
+  border-radius: 8px !important;
+}
+/***************************************************************************/
 /********************************  $Content  *******************************/
 /**
 * + Content
@@ -136,11 +136,12 @@ article>h4:first-child {
 }
 
 aside {
-  
+
   height: 100%;
 }
 
-aside h2, section h2 {
+aside h2,
+section h2 {
   color: #F0C300;
 }
 
@@ -204,7 +205,7 @@ h6 {
 header {
   position: relative;
   overflow: hidden;
-  background: linear-gradient(rgba(255, 255, 255, 1), rgba(255, 255, 255, 0.6)), url(../img/idea.jpg);
+  background: linear-gradient(rgba(255, 255, 255, 0.8), rgba(255, 255, 255, 0.6)), url(../img/idea.jpg);
   background-position: center;
   background-size: cover;
   -webkit-background-size: cover;
@@ -533,15 +534,17 @@ ul {
 .carousel-indicators {
   bottom: -40px !important;
 }
+
 /*******************************  $card  ********************************/
-.card{
+.card {
   padding: 0 !important;
 }
-.card-header
-{
+
+.card-header {
   margin-top: 0 !important;
   color: #F0C300;
 }
+
 /*******************************  $Buttons  ********************************/
 .btn {
   border: none;
@@ -564,9 +567,10 @@ ul {
 
 }
 
-.btn-prus:hover{
+.btn-prus:hover {
   background-color: #1a2f3f;
 }
+
 .btn.btn-bordered {
   border: 1px solid #c4c4c4;
   color: #0076d0;
@@ -703,7 +707,8 @@ ul {
   -webkit-overflow-scrolling: touch;
   border-radius: 3px;
 }
-.maps{
+
+.maps {
 
   height: 450px !important;
 }
@@ -1128,23 +1133,25 @@ a.go-top:hover {
 
 /********************************  $Navbar  ********************************/
 
-.logo_Nav
-{
+.logo_Nav {
   position: absolute;
   left: 1rem;
 }
-.nav_user{
+
+.nav_user {
   position: absolute;
   left: 5rem;
   top: 50%;
   transform: translate(0, -50%);
 }
-.nav_user--admin{
+
+.nav_user--admin {
   position: absolute;
-  left: 6rem;
+  left: 11.5rem;
   top: 50%;
   transform: translate(0, -50%);
 }
+
 .nav_contact {
   background: none;
   color: #F0C300;
@@ -1601,16 +1608,18 @@ a.go-top:hover {
   height: 70px;
   margin-bottom: 1rem;
 }
-.contact__detail
-{
+
+.contact__detail {
   margin-bottom: 6rem;
 }
-.contact__detail .btn{
+
+.contact__detail .btn {
   position: absolute;
   bottom: 0;
   left: 50%;
   transform: translate(-50%);
 }
+
 .about .box img {
   width: 100%;
   height: 150px;
@@ -1669,13 +1678,13 @@ footer {
   min-height: 85px;
   color: #b0b0b0;
   background-color: #24445c;
- 
+
 }
 
-.footerAbsolute{
-   position: absolute;
-   bottom: 0;
-   width: 100%;
+.footerAbsolute {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
 }
 
 footer a {

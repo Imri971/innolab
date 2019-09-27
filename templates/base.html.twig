@@ -52,9 +52,9 @@
       </button>
       {% if app.user %}
       <div class=" d-flex w-100">
-        <p class="badge badge-pill bg-prus nav_user yellow mr-3">Bienvenue {{app.user.name}} <small
+        <p class="badge badge-pill bg-prus nav_user yellow mr-3">Bienvenue {{app.user.name}} </p><small
             class="badge badge-pill bg-light nav_user--admin text-dark">{% if is_granted('ROLE_ADMIN') %} ADMIN
-            {% endif %}</small></p>
+            {% endif %}</small>
 
       </div>
 
@@ -81,7 +81,7 @@
       {% if not app.user %}
       <div class="col-lg-1 navUser">
         <div class="  d-flex justify-content-center text-nowrap ml-auto">
-          <a href="{{ path('app_login')}}" class="navUser__a" title="login"><i class="fas fa-lock iconNav"></i> Se
+          <a href="{{ path('app_login')}}" class="navUser__a mr-3" title="login"><i class="fas fa-lock iconNav"></i> Se
             connecter</a>
         </div>
       </div>
@@ -90,7 +90,7 @@
         <div class="d-flex  justify-content-center ">
 
           <div class="d-flex justify-content-center align-items-center text-nowrap">
-            <a href="{{ path('app_logout')}}" class=" navUser__a" title="logout"><i
+            <a href="{{ path('app_logout')}}" class=" navUser__a mr-3" title="logout"><i
                 class="fas fa-sign-in-alt iconNav"></i> Se déconnecter</a>
           </div>
 
