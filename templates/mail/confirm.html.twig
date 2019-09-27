@@ -3,17 +3,21 @@
 {% block title %}Confirm{% endblock %}
 
 {% block body %}
-
+    <div class="container col-lg-6">
     {% if app.user %}
-        <div class="container col-lg-6">
+        
     <h1>Confirmer votre souscription {{app.user.name}} </h1>
      {{form_start(form)}}
      {{form_row(form.Confirmer, {attr: {class: ' btn-prus'}})}}
      
      {{form_end(form)}}
-    </div>
-    {% endif %}
     
+
+    {% else %}
+        <h1>Vous devez recevoir un mail pour confirmer</h1>
+        <a href="{{path('program')}}" class="btn btn-prus">Choisir un programme</a>
+    {% endif %}
+    </div>
 
    
 {% endblock %}
