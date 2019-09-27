@@ -647,7 +647,7 @@ ul {
 
 /******************************  $Classes Item  ******************************/
 .classes-items {
- 
+  z-index: 0;
   transform: translate3d(0, 0, 0);
   -webkit-transform: translate3d(0, 0, 0);
 }
@@ -1209,7 +1209,7 @@ a.go-top:hover {
   position: fixed;
   width: 100%;
   top: 0;
-  z-index: 2 !important;
+  z-index: 1;
 }
 
 .navbar .navbar-nav {
