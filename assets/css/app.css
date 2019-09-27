@@ -644,11 +644,6 @@ ul {
   font-weight: normal;
 }
 
-/******************************  $Classes Item  ******************************/
-/* .classes-items {
-  transform: translate3d(0, 0, 0);
-  -webkit-transform: translate3d(0, 0, 0);
-} */
 
 .classes-items h2 {
   text-align: center;
@@ -1207,7 +1202,7 @@ a.go-top:hover {
   position: fixed;
   width: 100%;
   top: 0;
-  z-index: 1;
+  z-index: 1000 !important;
 }
 
 .navbar .navbar-nav {
@@ -1518,7 +1513,6 @@ a.go-top:hover {
   margin: 0 auto;
   padding: 0;
   position: relative;
-  text-indent: -9999px;
   width: 200px;
 }
 
