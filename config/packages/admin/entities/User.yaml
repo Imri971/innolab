@@ -5,6 +5,9 @@ easy_admin:
                 templates:
                     edit: 'admin/user/edit.html.twig'
                 list:
+                  Email:
+                   - label: "yo"
+                        
                   actions:
-                      - {name: "edit", icon: "pencil", label: false, css_class: "btn btn-primary mb-2"}
+                      - {name: "edit", icon: "pencil", label: false, css_class: "btn btn-primary "}
                       - {name: "delete", icon: "trash", label: false, css_class: "btn btn-danger"}

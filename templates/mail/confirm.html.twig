@@ -5,7 +5,7 @@
 {% block body %}
 
     {% if app.user %}
-        <div class="container col-5">
+        <div class="container col-lg-6">
     <h1>Confirmer votre souscription {{app.user.name}} </h1>
      {{form_start(form)}}
      {{form_row(form.Confirmer, {attr: {class: ' btn-prus'}})}}
@@ -17,3 +17,4 @@
 
    
 {% endblock %}
+{% block footerPosition %}footerAbsolute{% endblock %}

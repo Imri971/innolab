@@ -1,6 +1,7 @@
 {% extends 'base.html.twig' %}
 
 {% block title %}Connexion{% endblock %}
+
 {% block banner %}
 <div class="container banner d-block">
   <h1 class="banner__title ">Se connecter</h1>
@@ -16,15 +17,16 @@
       </div>
     {% endfor %}
 <form method="post">
-    {% if error %}
-        <div class="alert alert-danger">{{ error.messageKey|trans(error.messageData, 'security') }}</div>
-    {% endif %}
+    
 
     {# {% if app.user %}
         <div class="checkbox mb-3">You are logged in as {{ app.user.username }}, <a href="{{ path('app_logout') }}">Logout</a>
     {% endif %} #}
     <img src="{{asset('build/images/innolabMini.png')}}" class="d-block ml-auto mr-auto mb-4 new_img" alt="">
     <h1 class="h3 mb-5 font-weight-normal text-center">Connectez-vous</h1>
+    {% if error %}
+        <div class="alert alert-danger">Il n'y a pas de compte relié à cette adresse email.</div>
+    {% endif %}
     <label for="inputEmail" class="sr-only">Email</label>
     <input  type="email" value="{{ last_username }}" name="email" id="inputEmail" class="form-control mb-4" placeholder="Votre email" required autofocus>
     <label for="inputPassword" class="sr-only">Mot de passe</label>

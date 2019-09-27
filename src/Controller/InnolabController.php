@@ -64,7 +64,7 @@ class InnolabController extends AbstractController
             $manager->persist($user);
             $manager->flush();
            
-            $confirm = (new \Swift_Message('Innolab'))
+            $confirm = (new \Swift_Message('Innolab 62'))
             ->setFrom('innolab62sample@gmail.com')
             ->setTo($user->getEmail())
             ->setBody(
@@ -130,7 +130,7 @@ class InnolabController extends AbstractController
             $mailer->send($confirm);
             $this->addFlash(
                 'confirm',
-                'Votre souscription à été validée '.$user->getName().". Notre équipe vous contactera prochaînement."
+                'Votre souscription à été validée '.$user->getName().". Notre équipe vous recontactera prochainement."
             );
             return $this->redirectToRoute('innolab');
         }
