@@ -93,10 +93,10 @@ only screen and (max-width: 992px) {
   }
 
   .navbar {
-    position: fixed;
+    position: fixed !important;
     top: 0;
     width: 100%;
-    z-index: 999;
+    z-index: 1000;
   }
 
   .item-thumbnail .logo_banner {
@@ -109,12 +109,23 @@ only screen and (max-width: 992px) {
     background-color: #24445c !important;
   }
 
+  .navUser{
+    position: absolute !important;
+    top: 50%;
+    right: 5px;
+    width: auto !important;
+    transform: translate(0,-50%);
+  }
   .navbar .navbar-nav {
     line-height: 0px;
     display: flex;
     flex-direction: row;
     justify-content: center;
 
+  }
+  .nav-link
+  {
+    color: #F0C300 !important;
   }
 
   .navbar-nav .dropdown-menu {
@@ -187,13 +198,7 @@ only screen and (max-width: 992px) {
 @media handheld,
 only screen and (max-width: 767px) {
 
-  .navUser{
-    position: absolute !important;
-    top: 50%;
-    right: 5px;
-    width: auto !important;
-    transform: translate(0,-50%);
-  }
+  
   .navbar .navbar-nav {
     float: none;
   }
