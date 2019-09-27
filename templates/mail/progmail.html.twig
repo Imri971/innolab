@@ -3,15 +3,13 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
-        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
-
+    <link rel="stylesheet" href="https://bootswatch.com/4/lux/bootstrap.min.css">
 </head>
 
 <body>
     <div class="container col-lg-7 mt-5 mb-5">
 
-        <h3>Innolab 62: Votre demande de renseignements</h3>
+        <h3>Innolab 62: Votre demande d'informations</h3>
         <img src="{{asset('build/images/innolabMini.png')}}" class="icon" alt="">
         <small>Vous avez choisis un programme proposé par Innolab 62 le {{date | date('d/m/Y')}} à
             {{date | date('H:i')}}.</small>
@@ -28,7 +26,7 @@
         <p>Nous vous invitons à confirmer cette souscription auprès de notre équipe grâce au lien suivant afin de nous
             permettre de vous recontacter pour le suivi de votre demande.</p>
 
-        <strong><a href="http://127.0.0.1:8000/confirm" >Confirmer votre souscription.</a></strong>
+        <strong><a href="http://127.0.0.1:8000/confirm" class="btn btn-primary" >Confirmer votre souscription.</a></strong>
 
 
 

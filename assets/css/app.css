@@ -31,6 +31,11 @@
 {
   width: 300px;
 }
+
+.table th, .table td
+{
+  vertical-align: middle;
+}
   /***************************************************************************/
 /********************************  $Content  *******************************/
 /**
@@ -555,7 +560,7 @@ ul {
 .btn-prus {
 
   color: #fff;
-  background-color: #24445c;
+  background-color: #24445c !important;
 
 }
 
@@ -1131,6 +1136,12 @@ a.go-top:hover {
 .nav_user{
   position: absolute;
   left: 5rem;
+  top: 50%;
+  transform: translate(0, -50%);
+}
+.nav_user--admin{
+  position: absolute;
+  left: 6rem;
   top: 50%;
   transform: translate(0, -50%);
 }

@@ -27,9 +27,9 @@ class ProgrammesController extends AbstractController
     }
 
     /**
-     * @Route("/new", name="programmes_new", methods={"GET","POST"})
+     * @Route("/new", name="tags_new", methods={"GET","POST"})
      */
-    public function new(Request $request, UserInterface $user): Response
+    public function new(Request $request, UserInterface $user = null): Response
     {
         $programme = new Programmes();
         $form = $this->createForm(ProgrammesType::class, $programme);

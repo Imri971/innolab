@@ -1,12 +1,14 @@
 {% extends 'base.html.twig' %}
 {% form_theme form 'bootstrap_4_layout.html.twig' %}
 
-{% block title %}New Programmes{% endblock %}
+{% block title %}Nouveau programme{% endblock %}
 
 {% block body %}
-    <h1>Create new Programmes</h1>
+<div class="col-lg-10 ml-auto mr-auto mt-4">
+    <h1>Créer un nouveau programme</h1>
 
     {{ include('programmes/_form.html.twig') }}
 
-    <a href="{{ path('programmes_index') }}">back to list</a>
+    <a href="{{ path('programmes_index') }}" class="btn btn-prus">Retour à la liste</a>
+    </div>
 {% endblock %}

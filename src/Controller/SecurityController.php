@@ -28,7 +28,7 @@ class SecurityController extends AbstractController
         // if ($this->getUser()) {
         //         $this->redirectToRoute('program');
         //         }
-
+        
         return $this->render('security/login.html.twig', ['last_username' => $lastUsername, 'error' => $error]);
     }
 
@@ -59,7 +59,10 @@ class SecurityController extends AbstractController
                  ->setCreatedAt(new \DateTime());
             $entityManager->persist($user);
             $entityManager->flush();
-            
+            $this->addFlash(
+                'new',
+                'Nous confirmons votre souscription '.$user->getName().". Vous pouvez vous connecter maintenant."
+            );
 
             return $this->redirectToRoute('app_login');
         }
