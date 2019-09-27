@@ -4,64 +4,50 @@
 
 {% block banner %}
 <div class="container banner d-block">
-  <h1 class="banner__title ">Se connecter</h1>
+    <h1 class="banner__title ">Se connecter</h1>
 </div>
 {% endblock %}
 {% block body %}
 
 <div class="container col-lg-4 mt-5 mb-5">
-{% if not app.user %}
-{% for message in app.flashes('new') %}
-      <div class="alert alert-success">
+    {% if not app.user %}
+    {% for message in app.flashes('new') %}
+    <div class="alert alert-success">
         {{message}}
-      </div>
+    </div>
     {% endfor %}
-<form method="post">
-    
-
-    {# {% if app.user %}
-        <div class="checkbox mb-3">You are logged in as {{ app.user.username }}, <a href="{{ path('app_logout') }}">Logout</a>
-    {% endif %} #}
-    <img src="{{asset('build/images/innolabMini.png')}}" class="d-block ml-auto mr-auto mb-4 new_img" alt="">
-    <h1 class="h3 mb-5 font-weight-normal text-center">Connectez-vous</h1>
-    {% if error %}
+    <form method="post">
+        <img src="{{asset('build/images/innolabMini.png')}}" class="d-block ml-auto mr-auto mb-4 new_img" alt="">
+        <h1 class="h3 mb-5 font-weight-normal text-center">Connectez-vous</h1>
+        {% if error %}
         <div class="alert alert-danger">Il n'y a pas de compte relié à cette adresse email.</div>
-    {% endif %}
-    <label for="inputEmail" class="sr-only">Email</label>
-    <input  type="email" value="{{ last_username }}" name="email" id="inputEmail" class="form-control mb-4" placeholder="Votre email" required autofocus>
-    <label for="inputPassword" class="sr-only">Mot de passe</label>
-    <input type="password" name="password" id="inputPassword" class="form-control mb-4" placeholder="Votre mot de passe" required>
+        {% endif %}
+        <label for="inputEmail" class="sr-only">Email</label>
+        <input type="email" value="{{ last_username }}" name="email" id="inputEmail" class="form-control mb-4"
+            placeholder="Votre email" required autofocus>
+        <label for="inputPassword" class="sr-only">Mot de passe</label>
+        <input type="password" name="password" id="inputPassword" class="form-control mb-4"
+            placeholder="Votre mot de passe" required>
 
-    <input type="hidden" name="_csrf_token"
-           value="{{ csrf_token('authenticate') }}"
-    >
-
-    {#
-        Uncomment this section and add a remember_me option below your firewall to activate remember me functionality.
-        See https://symfony.com/doc/current/security/remember_me.html
- #}
+        <input type="hidden" name="_csrf_token" value="{{ csrf_token('authenticate') }}">
         <div class="checkbox mb-3">
             <label>
                 <input type="checkbox" name="_remember_me"> Se rappeler de moi
             </label>
         </div>
-   
+        <button class="btn btn-lg btn-prus mt-2 mb-4" type="submit">
+            Se connecter
+        </button>
+        <p>Si nous n'avez pas de compte: </p>
+        <a href="{{path('new_user')}}" class="btn btn-prus">S'inscrire</a>
+    </form>
 
-    <button class="btn btn-lg btn-prus mt-2 mb-4" type="submit">
-        Se connecter
-    </button>
-    <p>Si nous n'avez pas de compte: </p>
-    <a href="{{path('new_user')}}" class="btn btn-prus">S'inscrire</a>
-</form>
-
-{% else %}
+    {% else %}
     <h1>Vous êtes déjà connecté {{app.user.name}} </h1>
     <a href="{{path('app_logout')}}" class="btn btn-prus">Se déconnecter</a>
-{% endif %}
+    {% endif %}
 </div>
 {% endblock %}
 
 
-    {% block footerPosition %}{% if app.user %}footerAbsolute{% endif %}{% endblock %}
-
- 
+{% block footerPosition %}{% if app.user %}footerAbsolute{% endif %}{% endblock %}

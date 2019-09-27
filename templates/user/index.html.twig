@@ -5,8 +5,8 @@
 {% block body %}
 
 {% if app.user %}
-    {% if is_granted('ROLE_ADMIN') %}  
-    <div class="container mt-4 mb-5">
+{% if is_granted('ROLE_ADMIN') %}
+<div class="container mt-4 mb-5">
     <h1>Utilisateurs d'Innolab</h1>
 
     <table class="table">
@@ -17,11 +17,11 @@
                 <th>Date d'inscription</th>
                 <th>Programme</th>
                 <th>Actions</th>
-                
+
             </tr>
         </thead>
         <tbody>
-        {% for user in users %}
+            {% for user in users %}
             <tr>
                 <td>{{ user.name }}</td>
                 <td>{{ user.email }}</td>
@@ -32,11 +32,11 @@
                     <a href="{{ path('user_edit', {'id': user.id}) }}">edit</a>
                 </td>
             </tr>
-        {% else %}
+            {% else %}
             <tr>
                 <td colspan="6">no records found</td>
             </tr>
-        {% endfor %}
+            {% endfor %}
         </tbody>
     </table>
 
@@ -45,20 +45,20 @@
 </div>
 
 {% else %}
-    <div class="container mt-5 mb-5">
-        <h1>Cette page est réservée aux administrateurs</h1>
-        <a href="{{ path('app_login')}}" class="btn btn-prus">Se connecter</a>
-    </div>
-    
-     <div class="container mt-4 mb-5"></div>
-    
+<div class="container mt-5 mb-5">
+    <h1>Cette page est réservée aux administrateurs</h1>
+    <a href="{{ path('app_login')}}" class="btn btn-prus">Se connecter</a>
+</div>
+
+<div class="container mt-4 mb-5"></div>
+
 {% endif %}
 {% else %}
-    <div class="container mt-5 mb-5">
-        <h1>Cette page est réservée aux administrateurs</h1>
-        <a href="{{ path('app_login')}}" class="btn btn-prus ">Se connecter</a>
-    </div>
+<div class="container mt-5 mb-5">
+    <h1>Cette page est réservée aux administrateurs</h1>
+    <a href="{{ path('app_login')}}" class="btn btn-prus ">Se connecter</a>
+</div>
 {% endif %}
 
-    
+
 {% endblock %}
