@@ -96,7 +96,7 @@ only screen and (max-width: 992px) {
     position: fixed;
     top: 0;
     width: 100%;
-    z-index: 1 !important;
+    z-index: 999;
   }
 
   .item-thumbnail .logo_banner {
