@@ -315,6 +315,11 @@ only screen and (max-width: 767px) {
     right: -26px !important;
   }
 
+  .footerAbsolute {
+    position: relative;
+  }
+  
+
 }
 
 /* ---------------------------------------------------------------------- */
