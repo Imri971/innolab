@@ -145,9 +145,6 @@ only screen and (max-width: 992px) {
     display: none;
   }
 
-  .nav_user--admin {
-    left: 7.8rem;
-}
 .navbar .navbar-nav {
   float: none;
   min-height: auto !important;
@@ -256,10 +253,7 @@ only screen and (max-width: 767px) {
     left: 3rem !important;
     
   }
-  
-  .nav_user--admin {
-    left: 5.5rem;
-  }
+ 
  
   .nav_contact li a span {
     display: none;
