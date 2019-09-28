@@ -54,7 +54,7 @@
         {% for programme in programmes %}
         <div class=" block col-md-4 mb-4 pt-3 d-flex justify-content-center">
           <div class="contact__detail">
-            <i class=" {{programme.picture}} mb-3 "></i>
+            <i class=" {{programme.picture}} mb-3 icon"></i>
            
             <p class="text-uppercase font-weight-bold">{{programme.name}}</p>
             <p>{{programme.description|raw|truncate(110, true)}}</p>
