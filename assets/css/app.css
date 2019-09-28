@@ -1565,10 +1565,10 @@ a.go-top:hover {
 }
 
 .contact i
-{
+{ 
   color: #24445c;
-  font-size: 4rem;
-}
+  font-size: 4rem !important; 
+} 
 
 .contact .icon {
   color: #33658a;
