@@ -105,20 +105,10 @@ class Programmes
         return $this;
     }
 
-
-
-
-
-    
-
     public function __toString()
     {
         return $this->name;
     }
-
-
-
-
 
     public function getPicture(): ?string
     {
@@ -126,7 +116,7 @@ class Programmes
     }
 
     public function setPicture(?string $picture): self
-    {
+    { 
         $this->picture = $picture;
 
         return $this;
