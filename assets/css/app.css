@@ -1,24 +1,3 @@
-.crisp-client .crisp-1rjpbb7 .crisp-1rf4xdh .crisp-kquevr .crisp-x94m06 {
-  background-color: #F0C300 !important;
-}
-
-.crisp-client .crisp-1rjpbb7 .crisp-1rf4xdh .crisp-ewasyx .crisp-zyxrmn .crisp-1bu0ive .crisp-1uswakw .crisp-1qi8gka {
-  display: none !important;
-}
-
-.crisp-client .crisp-1rjpbb7[data-last-operator-face="false"] .crisp-1rf4xdh .crisp-kquevr .crisp-x94m06 .crisp-16qgsyi .crisp-101bp3x[data-is-ongoing="false"] {
-
-  background-image: url(https://scontent-cdt1-1.xx.fbcdn.net/v/t1.15752-9/71288715_388567668491216_8189578631387807744_n.png?_nc_cat=111&_nc_oc=AQnCEgwDqBLvA2LsnGsh-OlEPy2HvF-smeyWKE-NHKXL-XxOOwaUbDN27C_iHtB_W1o&_nc_ht=scontent-cdt1-1.xx&oh=d6c24acef1fd302b9ef150e2fbb7d182&oe=5E2F1DE0) !important;
-}
-
-.crisp-client .crisp-1rjpbb7 .crisp-1rf4xdh .crisp-ewasyx .crisp-1784wh6 .crisp-1xmtdlg {
-
-  background-image: linear-gradient(125deg, #EDB410 -10%, #E1D54F 100%) !important;
-}
-
-.crisp-client .crisp-1rjpbb7 .crisp-1rf4xdh .crisp-ewasyx .crisp-zyxrmn .crisp-1bu0ive .crisp-z7oo2o .crisp-lgu84d .crisp-1ohjrf0 .crisp-dqw9ko .crisp-bhspdv .crisp-z89v5n .crisp-162m9xf {
-  background-color: #F0C300 !important;
-}
 
 .yellow {
   color: #F0C300 !important;
@@ -1147,12 +1126,7 @@ a.go-top:hover {
   transform: translate(0, -50%);
 }
 
-.nav_user--admin {
-  position: absolute;
-  left: 11.5rem;
-  top: 50%;
-  transform: translate(0, -50%);
-}
+
 
 .nav_contact {
   background: none;

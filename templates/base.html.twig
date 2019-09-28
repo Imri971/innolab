@@ -5,10 +5,14 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
-
-  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css">
+  
+  <link rel="stylesheet" href="{{ asset('font/css/all.min.css') }}">
   <link href="{{ asset('css/bootstrap.min.css') }}" type="text/css" rel="stylesheet">
   <link rel="icon" href="{{asset('build/images/innolabLamp.png')}}" />
+  {% block stylesheets %}
+  {{ encore_entry_link_tags ( 'app' ) }}
+  {% endblock %}
+  <link rel="stylesheet" href="{{ asset('css/media-queries.css') }}" />
   <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
 
   <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
@@ -19,12 +23,8 @@
 
   <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
 
-<![endif]-->
+  <![endif]-->
   <title>{% block title %}{% endblock %}</title>
-  {% block stylesheets %}
-  {{ encore_entry_link_tags ( 'app' ) }}
-  {% endblock %}
-  <link rel="stylesheet" href="{{ asset('css/media-queries.css') }}" />
   
 </head>
 
@@ -41,9 +41,9 @@
       </button>
       {% if app.user %}
       <div class=" d-flex w-100">
-        <p class="badge badge-pill bg-prus nav_user yellow mr-3"><span>Bienvenue</span> {{app.user.name}}</p><small
-            class="badge badge-pill bg-light nav_user--admin text-dark">{% if is_granted('ROLE_ADMIN') %} ADMIN
-            {% endif %}</small>
+        <p class="badge badge-pill bg-prus nav_user yellow mr-3"><span>Bienvenue</span> {{app.user.name}}  <small
+            class="badge badge-pill bg-light nav_user--admin text-dark"> {% if is_granted('ROLE_ADMIN') %} ADMIN
+            {% endif %}</small></p>
 
       </div>
 
