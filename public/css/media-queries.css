@@ -57,6 +57,10 @@
 /* ---------------------------------------------------------------------- */
 @media handheld,
 only screen and (max-width: 992px) {
+
+  body {
+    padding-top: 4rem;
+  }
   header {
     position: relative;
     z-index: 2;
@@ -72,7 +76,7 @@ only screen and (max-width: 992px) {
   }
 
   .header_index {
-    height: 33vh !important;
+    height: 43vh !important;
     background-attachment: scroll !important;
     -webkit-background-attachment: scroll !important;
     background-position: center;
@@ -88,10 +92,7 @@ only screen and (max-width: 992px) {
     font-size: 1.6em;
   }
 
-  body {
-    padding-top: 5.5rem;
-  }
-
+ 
   .navbar {
     position: fixed !important;
     top: 0;
@@ -197,7 +198,7 @@ only screen and (max-width: 992px) {
   }
 
   .twitter_fil {
-    margin-bottom: 8rem;
+    margin-bottom: 3rem;
   }
 
   .box_projects {
@@ -303,9 +304,9 @@ only screen and (max-width: 767px) {
     display: none !important;
   }
 
-  .innolab__infos--block {
+  /* .innolab__infos--block {
     width: 70%;
-  }
+  } */
 
   .carousel-control-prev {
     left: -37px;

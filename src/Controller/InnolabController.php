@@ -38,7 +38,7 @@ class InnolabController extends AbstractController
         
         $programmes = $pro->findAll();
 
-        return $this->render('innolab/program.html.twig', [
+        return $this->render('prog/program.html.twig', [
             'controller_name' => 'InnolabController',
             'programmes' => $programmes
         ]);
@@ -59,7 +59,7 @@ class InnolabController extends AbstractController
             $datas = $form->getData();
             
             $datas['name']= $programmes->getName();
-            // dump($datas);
+            
             $user->setAlias($datas['name']);
             $manager->persist($user);
             $manager->flush();
@@ -69,8 +69,8 @@ class InnolabController extends AbstractController
             ->setTo($user->getEmail())
             ->setBody(
                 $this->renderView(
-                    // templates/mail/progmail.html.twig
-                    'mail/progmail.html.twig',
+                    // templates/mail/mailAdmin.html.html.twig
+                    'mail/mailAdmin.html.html.twig',
                     ['name' => $user->getName(),
                      'email' => $user->getEmail(),
                      'tel' => $user->getTel(),
@@ -85,7 +85,7 @@ class InnolabController extends AbstractController
             //$request->getSession()->getFlashBag()->add();
             $this->addFlash(
                 'success',
-                'Votre demande de renseignements sur le programme '.$user->getAlias().' a bien été prise en compte '.$user->getName()."."
+                'Votre demande d\'informations sur le programme '.$user->getAlias().' a bien été prise en compte '.$user->getName()."."
             );
             return $this->redirectToRoute('innolab');
         }
@@ -96,47 +96,5 @@ class InnolabController extends AbstractController
         ]);
     }
 
-    /**
-     * @Route("/confirm", name="confirm", methods={"GET", "POST"})
-     */
-    public function confirm(Request $request, UserInterface $user,  \Swift_Mailer $mailer)
-    {
-        $form = $this->createForm(ConfirmType::class);
-        $form->handleRequest($request);
-        $date= new \DateTime();
-        if ($form->isSubmitted() && $form->isValid()) {
-            
-            $datas = $form->getData();
-            dump($datas);
-            
-            $confirm = (new \Swift_Message('Innolab'))
-            ->setFrom($user->getEmail())
-            ->setTo('innolab62sample@gmail.com')
-            ->setBody(
-                $this->renderView(
-                    // templates/mail/ajout.html.twig
-                    'mail/ajout.html.twig',
-                    ['name' => $user->getName(),
-                     'email' => $user->getEmail(),
-                     'tel' => $user->getTel(),
-                     'alias' => $user->getAlias(),
-                     'date' => $date,
-                     'creation' => $user->getCreatedAt()
-                    ]
-                )
-            ,
-            'text/html'
-            );
-            $mailer->send($confirm);
-            $this->addFlash(
-                'confirm',
-                'Votre souscription à été validée '.$user->getName().". Notre équipe vous recontactera prochainement."
-            );
-            return $this->redirectToRoute('innolab');
-        }
-
-        return $this->render('mail/confirm.html.twig', [
-            'form' => $form->createView()
-        ]);
-    }
+    
 }
