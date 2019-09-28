@@ -71,7 +71,7 @@ class MailController extends AbstractController
             ->setBody(
                 $this->renderView(
                     // templates/mail/mailAdmin.html.twig
-                    'mail/mailAdmin.html.twig',
+                    'mail/mailadmin.html.twig',
                     ['name' => $user->getName(),
                      'email' => $user->getEmail(),
                      'tel' => $user->getTel(),

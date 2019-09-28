@@ -70,7 +70,7 @@ class InnolabController extends AbstractController
             ->setBody(
                 $this->renderView(
                     // templates/mail/mailAdmin.html.html.twig
-                    'mail/mailAdmin.html.html.twig',
+                    'mail/mailuser.html.twig',
                     ['name' => $user->getName(),
                      'email' => $user->getEmail(),
                      'tel' => $user->getTel(),
