@@ -1564,16 +1564,10 @@ a.go-top:hover {
   height: 409px;
 }
 
-.contact i
+.contact .icon
 { 
   color: #24445c;
   font-size: 4rem !important; 
-} 
-
-.contact .icon {
-  color: #33658a;
-  width: 70px;
-  height: 70px;
   margin-bottom: 1rem;
 }
 
