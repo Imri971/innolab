@@ -1542,10 +1542,10 @@ a.go-top:hover {
 .item-thumbnail.triangle .overthumb {
   background: none;
   border-bottom: 275px solid #0076d0;
-  border-right: 270px solid transparent;
+  border-right: 270px solid transparent; 
 }
 
-.readmore:hover .overthumb {
+.readmore:hover .overthumb { 
   opacity: 0.6 !important;
 }
 
